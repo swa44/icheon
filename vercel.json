@@ -9,6 +9,16 @@
       "source": "/송석준/:path*",
       "destination": "/song/:path*",
       "permanent": true
+    },
+    {
+      "source": "/%EC%86%A1%EC%84%9D%EC%A4%80",
+      "destination": "/song",
+      "permanent": true
+    },
+    {
+      "source": "/%EC%86%A1%EC%84%9D%EC%A4%80/:path*",
+      "destination": "/song/:path*",
+      "permanent": true
     }
   ]
 }
