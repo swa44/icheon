@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/송석준",
+      "destination": "/song",
+      "permanent": true
+    },
+    {
+      "source": "/송석준/:path*",
+      "destination": "/song/:path*",
+      "permanent": true
+    }
+  ]
+}
