@@ -41,14 +41,14 @@
       "permanent": true
     },
     {
-      "source": "/:path*",
+      "source": "/:path(.*)",
       "has": [
         {
           "type": "host",
           "value": "xn--3e0bqpe42d.xn--hu5bi8g.com"
         }
       ],
-      "destination": "https://xn--hu5bi8g.com/kimjk/:path*",
+      "destination": "https://xn--hu5bi8g.com/kimjk/:path",
       "permanent": true
     }
   ]
