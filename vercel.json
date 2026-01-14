@@ -50,6 +50,17 @@
       ],
       "destination": "https://xn--hu5bi8g.com/kimjk/:path",
       "permanent": true
+    },
+    {
+      "source": "/:path(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "xn--3i4bljw2q.xn--hu5bi8g.com"
+        }
+      ],
+      "destination": "https://xn--hu5bi8g.com/song/:path",
+      "permanent": true
     }
   ]
 }
