@@ -21,6 +21,26 @@
       "permanent": true
     },
     {
+      "source": "/김재국",
+      "destination": "/kimjk",
+      "permanent": true
+    },
+    {
+      "source": "/김재국/:path*",
+      "destination": "/kimjk/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/%EA%B9%80%EC%9E%AC%EA%B5%AD",
+      "destination": "/kimjk",
+      "permanent": true
+    },
+    {
+      "source": "/%EA%B9%80%EC%9E%AC%EA%B5%AD/:path*",
+      "destination": "/kimjk/:path*",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {
