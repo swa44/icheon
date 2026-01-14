@@ -20,5 +20,17 @@
       "destination": "/song/:path*",
       "permanent": true
     }
+
+     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "xn--910b95x24n.xn--hu5bi8g.com"
+        }
+      ],
+      "destination": "https://xn--hu5bi8g.com/kimjk/:path*",
+      "permanent": true
+    }
   ]
 }
