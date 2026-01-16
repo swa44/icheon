@@ -67,12 +67,8 @@ nav a {
   padding: 8px 0;
 }
 
-nav a:hover {
-  background: #f8f9fa;
-  color: var(--primary-color);
-}
-
 nav a.active {
+  background: #f8f9fa;
   color: var(--primary-color);
 }
 
@@ -1341,4 +1337,104 @@ nav.highlight {
   color: var(--primary-color);
   font-size: 0.9rem;
   flex-shrink: 0;
+}
+/* SNS & 연락처 푸터 섹션 */
+.sns-footer-section {
+  background: #2b2b2b;
+  padding: 25px 20px 30px 20px;
+  margin-top: 30px;
+}
+
+.sns-footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* 왼쪽 텍스트 정보 */
+.footer-info {
+  text-align: center;
+  width: 100%;
+}
+
+.footer-text {
+  font-size: 0.8rem;
+  color: #e0e0e0;
+  margin: 0 0 5px 0;
+  line-height: 1.6;
+}
+
+.footer-text:last-child {
+  margin-bottom: 0;
+}
+
+/* 오른쪽 SNS 아이콘 */
+.footer-sns-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.sns-icon-small {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.sns-icon-small:hover {
+  transform: scale(1.15);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+/* 각 SNS 배경 색상 */
+.facebook-icon {
+  background: #1877f2;
+}
+
+.instagram-icon {
+  background: linear-gradient(135deg, #e1306c, #fd1d1d);
+}
+
+.youtube-icon {
+  background: #ff0000;
+}
+
+.naver-icon {
+  background: #03c75a;
+}
+
+.twitter-icon {
+  background: #000000;
+}
+
+.email-icon {
+  background: #ea4335;
+}
+
+/* 반응형 */
+@media (max-width: 375px) {
+  .footer-text {
+    font-size: 0.75rem;
+  }
+
+  .sns-icon-small {
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
+  }
+
+  .footer-sns-icons {
+    gap: 12px;
+  }
 }
