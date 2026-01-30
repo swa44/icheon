@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
     <title>이천시 국회의원 송석준</title>
@@ -106,6 +106,11 @@
     <meta name="twitter:title" content="국회의원 송석준" />
     <meta name="twitter:description" content="상생과 조화의 고장 이천시" />
 
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -119,71 +124,117 @@
   <body>
     <header>
       <nav>
+        <a href="/song/index.html" class="active" aria-label="홈">
+          <i class="fas fa-home icon"></i>
+          <span>홈</span>
+        </a>
         <a href="/song/1_one.html" aria-label="송석준 소개">
+          <i class="fas fa-user icon"></i>
           <span>송석준</span>
         </a>
         <a href="/song/2_two.html" aria-label="의정보고 보기">
+          <i class="fas fa-clipboard-list icon"></i>
           <span>의정보고</span>
         </a>
         <a href="/song/3_three.html" aria-label="영상 보기">
+          <i class="fas fa-play-circle icon"></i>
           <span>영상보기</span>
         </a>
-        <a href="/song/4_four.html" aria-label="SNS 보기">
-          <span>SNS</span>
+        <a href="/song/4_four.html" aria-label="지역주요사업 보기">
+          <i class="fas fa-map-marked-alt icon"></i>
+          <span>지역주요사업</span>
         </a>
       </nav>
     </header>
 
     <main>
       <div class="hero-section">
-        <img
+        <!--<img
           src="/song/assets/12home1.jpg"
           alt="송석준 의원"
           width="100%"
           loading="eager"
-        />
+        />-->
         <img
-          src="/song/assets/12homehi1.jpg"
-          alt="인사말"
-          width="100%"
-          loading="eager"
-        />
-        <img
-          src="/song/assets/pdf1.jpg"
-          alt="pdf"
-          width="100%"
-          loading="eager"
-        />
-        <img
-          src="/song/assets/pdf2.jpg"
-          alt="pdf"
-          width="100%"
-          loading="eager"
-        />
-        <img
-          src="/song/assets/pdf3.jpg"
-          alt="pdf"
-          width="100%"
-          loading="eager"
-        />
-        <img
-          src="/song/assets/pdf4.jpg"
-          alt="pdf"
-          width="100%"
-          loading="eager"
+          src="/song/assets/202601_2.jpg"
+          style="
+            width: 100%;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            display: block;
+          "
+          alt="의정보고 이미지 2"
+          loading="lazy"
         />
       </div>
 
-      <div class="content-section">
-        <img
-          src="/song/assets/home_tap.jpg"
-          alt="하단 배너"
-          class="footer-image"
-          loading="lazy"
-        />
+      <div class="contact-profile-card" style="margin-bottom: 70px">
+        <div class="profile-header">
+          <h3>이천시민과 함께하는 송석준</h3>
+          <p>언제나 여러분의 목소리에 귀 기울이겠습니다</p>
+        </div>
+        <div class="profile-body">
+          <div class="info-container">
+            <div class="info-item">
+              <div class="icon-box icon-phone">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="text-content">
+                <span class="label">전화번호</span>
+                <span class="value">031-632-1964</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="icon-box icon-map">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="text-content">
+                <span class="label">사무실 주소</span>
+                <span class="value">경기도 이천시 중리천로72번길 2, 2층</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-container">
+            <a
+              href="https://blog.naver.com/seogjuns"
+              class="social-btn bg-blog"
+              title="블로그"
+              ><i class="fa-solid fa-b"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/songseogjun2000"
+              class="social-btn bg-insta"
+              title="인스타그램"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/icheonsarang"
+              class="social-btn bg-fb"
+              title="페이스북"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/channel/UC5stcMGrLFFzDwdDeTxeHuQ"
+              class="social-btn bg-yt"
+              title="유튜브"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div id="navGuide" class="nav-guide">
+        <div class="nav-guide-content">
+          <i class="fas fa-hand-point-down"></i>
+          <p>아래를 눌러 다른 페이지도 구경하세요!</p>
+          <i class="fas fa-hand-point-down"></i>
+        </div>
       </div>
     </main>
 
     <script src="/song/video-delay.js"></script>
+    <script src="/song/nav-guide.js"></script>
   </body>
 </html>
