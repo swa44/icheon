@@ -134,7 +134,7 @@
         transition: fill 0.3s ease;
       }
       .region-group:hover .region {
-        fill: lightgray;
+        fill: red;
       }
 
       .region_text {
@@ -320,7 +320,7 @@
       }
 
       .page-header {
-        background-color: #333333;
+        background-color: #e61e2b;
         color: #f9f9f9;
         text-align: center;
         padding: 10px 20px; /* 좌우 패딩을 조금 더 줘서 보기 좋게 */
@@ -331,7 +331,7 @@
       .page-header h2 {
         margin: 0;
         font-size: 1.5rem;
-        font-weight: 700;
+        font-weight: 800;
       }
 
       .image-card-body {
@@ -386,15 +386,14 @@
         </a>
         <a href="2_two.html" aria-label="의정보고 보기">
           <i class="fas fa-clipboard-list icon"></i>
-          <span>의정보고</span>
+          <span>의정보고</span> </a
+        ><a href="4_four.html" class="active" aria-label="지역주요사업 보기">
+          <i class="fas fa-map-marked-alt icon"></i>
+          <span>지역주요사업</span>
         </a>
         <a href="3_three.html" aria-label="영상 보기">
           <i class="fas fa-play-circle icon"></i>
           <span>영상보기</span>
-        </a>
-        <a href="4_four.html" class="active" aria-label="지역주요사업 보기">
-          <i class="fas fa-map-marked-alt icon"></i>
-          <span>지역주요사업</span>
         </a>
       </nav>
     </header>
@@ -406,9 +405,10 @@
       <p
         style="
           text-align: center;
-          margin-top: 10px;
-          color: #555;
+          margin-top: 5px;
+          color: #333333;
           font-weight: 700;
+          font-size: 1.2rem;
         "
       >
         궁금하신 지역을 눌러주세요.
@@ -841,66 +841,58 @@
         let lastSelectedText = null;
 
         function showInfo(regionName, content, targetId) {
-          const modalOverlay = document.getElementById("modal-overlay");
-
-          // 1. 모달 표시 및 내용 설정 (이미지 로딩 없이 바로 텍스트 표시)
-          modalOverlay.classList.add("show");
-          document.body.style.overflow = "hidden"; // 배경 스크롤 방지
-          document.body.style.overscrollBehaviorY = "none"; // 당겨서 새로고침 방지
-
-          // 내용 포맷팅: ■ 문자가 있으면 리스트로 변환, 없으면 줄바꿈만 처리
-          let formattedContent = content;
-          if (content.includes("■")) {
-            // ■ 로 분리하고 빈 항목 제거
-            const items = content
-              .split("■")
-              .filter((item) => item.trim() !== "");
-            formattedContent =
-              '<ul class="modal-list">' +
-              items
-                .map(
-                  (item) =>
-                    `<li><i class="fas fa-check-circle" style="color: #e61e2b; margin-right: 5px;"></i><span>${item.trim()}</span></li>`,
-                )
-                .join("") +
-              "</ul>";
-          } else {
-            formattedContent = content.replace(/\n/g, "<br>");
-          }
-
-          modalOverlay.innerHTML = `
-            <div class="image-card" onclick="event.stopPropagation()">
-              <div class="image-card-header">
-                <span>${regionName}</span>
-                <button class="close-button" onclick="closeModal()">&times;</button>
-              </div>
-              <div class="image-card-body">
-                ${formattedContent}
-              </div>
-            </div>
-          `;
-
-          // 3. 기존 선택된 모양과 텍스트 색상 복원
-          if (lastSelectedShape) {
-            lastSelectedShape.style.fill = "gray";
-          }
-          if (lastSelectedText) {
-            lastSelectedText.style.stroke = "none";
-            lastSelectedText.style.strokeWidth = "0px";
-          }
-          /*
-          // 4. 현재 선택된 모양 색상 변경
           const selectedRegion = document.getElementById(targetId);
-          selectedRegion.style.fill = 'red';
+          // 0. 기존 선택된 색상 초기화
+          if (lastSelectedShape && lastSelectedShape !== selectedRegion) {
+            lastSelectedShape.style.fill = "";
+          }
 
-          // 5. 현재 선택된 텍스트에 테두리 효과 추가
-          const selectedText = document.getElementById(`${targetId}_text`);
-          selectedText.style.stroke = 'white';
-          selectedText.style.strokeWidth = '5px';
-*/
-          // 6. 선택된 모양과 텍스트를 저장
-          lastSelectedShape = selectedRegion;
-          lastSelectedText = selectedText;
+          // 1. 클릭 효과: 색상 변경
+          if (selectedRegion) {
+            selectedRegion.style.fill = "#e61e2b"; // 브랜드 색상으로 하이라이트
+            lastSelectedShape = selectedRegion;
+          }
+
+          // 2. 약간의 딜레이 후 모달 표시 (색상 변경 효과를 보여주기 위함)
+          setTimeout(() => {
+            const modalOverlay = document.getElementById("modal-overlay");
+
+            modalOverlay.classList.add("show");
+            document.body.style.overflow = "hidden"; // 배경 스크롤 방지
+            document.body.style.overscrollBehaviorY = "none"; // 당겨서 새로고침 방지
+
+            // 내용 포맷팅: ■ 문자가 있으면 리스트로 변환, 없으면 줄바꿈만 처리
+            let formattedContent = content;
+            if (content.includes("■")) {
+              // ■ 로 분리하고 빈 항목 제거
+              const items = content
+                .split("■")
+                .filter((item) => item.trim() !== "");
+              formattedContent =
+                '<ul class="modal-list">' +
+                items
+                  .map(
+                    (item) =>
+                      `<li><i class="fas fa-check-circle" style="color: #e61e2b; margin-right: 5px;"></i><span>${item.trim()}</span></li>`,
+                  )
+                  .join("") +
+                "</ul>";
+            } else {
+              formattedContent = content.replace(/\n/g, "<br>");
+            }
+
+            modalOverlay.innerHTML = `
+              <div class="image-card" onclick="event.stopPropagation()">
+                <div class="image-card-header">
+                  <span>${regionName}</span>
+                  <button class="close-button" onclick="closeModal()">&times;</button>
+                </div>
+                <div class="image-card-body">
+                  ${formattedContent}
+                </div>
+              </div>
+            `;
+          }, 150); // 300ms 딜레이
         }
 
         function closeModal(event) {
@@ -918,10 +910,16 @@
           document.body.style.overflow = ""; // 배경 스크롤 허용
           document.body.style.overscrollBehaviorY = "";
 
+          // 모달 닫을 때 하이라이트 해제
+          if (lastSelectedShape) {
+            lastSelectedShape.style.fill = "";
+            lastSelectedShape = null;
+          }
+
           // 애니메이션 완료 후 내용 제거
           setTimeout(() => {
             modalOverlay.innerHTML = "";
-          }, 300);
+          }, 150);
         }
 
         // ESC 키로 모달 닫기
