@@ -1,8 +1,13 @@
 {
   "redirects": [
     {
+      "source": "/",
+      "destination": "/song/",
+      "permanent": true
+    },
+    {
       "source": "/송석준",
-      "destination": "/song",
+      "destination": "/song/",
       "permanent": true
     },
     {
@@ -12,7 +17,7 @@
     },
     {
       "source": "/%EC%86%A1%EC%84%9D%EC%A4%80",
-      "destination": "/song",
+      "destination": "/song/",
       "permanent": true
     },
     {
@@ -22,7 +27,7 @@
     },
     {
       "source": "/김재국",
-      "destination": "/kimjk",
+      "destination": "/kimjk/",
       "permanent": true
     },
     {
@@ -32,7 +37,7 @@
     },
     {
       "source": "/%EA%B9%80%EC%9E%AC%EA%B5%AD",
-      "destination": "/kimjk",
+      "destination": "/kimjk/",
       "permanent": true
     },
     {
