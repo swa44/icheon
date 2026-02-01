@@ -1,11 +1,6 @@
 {
   "redirects": [
     {
-      "source": "/",
-      "destination": "/song/",
-      "permanent": true
-    },
-    {
       "source": "/송석준",
       "destination": "/song/",
       "permanent": true
