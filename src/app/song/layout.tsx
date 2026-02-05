@@ -31,11 +31,33 @@ export const metadata: Metadata = {
     ],
   },
   manifest: "/song/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "국회의원 송석준",
+  },
 };
 export default function SongLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <>
+      {children}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            if ('serviceWorker' in navigator) {
+              window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/song/sw.js', { scope: '/song/' })
+                  .then(reg => console.log('SW registered:', reg))
+                  .catch(err => console.error('SW registration failed:', err));
+              });
+            }
+          `,
+        }}
+      />
+    </>
+  );
 }
