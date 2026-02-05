@@ -51,7 +51,7 @@ export async function POST(request: Request) {
   try {
     const { data: subs, error: subsError } = await supabase
       .from("push_subscriptions")
-      .select("subscription");
+      .select("id, subscription");
 
     if (!subsError && subs && subs.length > 0) {
       const payload = JSON.stringify({
@@ -62,10 +62,20 @@ export async function POST(request: Request) {
       });
 
       subs.forEach((row: any) => {
-        webpush.sendNotification(row.subscription, payload).catch((err) => {
-          // 만료된 토큰인 경우 DB에서 삭제하는 로직을 추가할 수 있습니다.
-          console.error("Push send error", err);
-        });
+        webpush
+          .sendNotification(row.subscription, payload)
+          .catch(async (err) => {
+            // 410 (Gone) 또는 404 (Not Found) 에러는 구독이 만료되었음을 의미함
+            if (err.statusCode === 410 || err.statusCode === 404) {
+              console.log(`Removing expired subscription: ${row.id}`);
+              await supabase
+                .from("push_subscriptions")
+                .delete()
+                .eq("id", row.id);
+            } else {
+              console.error("Push send error", err);
+            }
+          });
       });
     }
   } catch (pushError) {
