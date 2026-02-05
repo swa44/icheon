@@ -1,35 +1,23 @@
 import { NextResponse } from "next/server";
-import fs from "fs";
-import path from "path";
-
-// 구독 정보를 저장할 파일 경로
-const SUBS_FILE_PATH = path.join(process.cwd(), "subscriptions.json");
+import { supabase } from "@/lib/supabase";
 
 export async function POST(request: Request) {
   try {
     const subscription = await request.json();
 
-    // 기존 구독 정보 읽기
-    let subscriptions = [];
-    if (fs.existsSync(SUBS_FILE_PATH)) {
-      const fileContent = fs.readFileSync(SUBS_FILE_PATH, "utf8");
-      subscriptions = JSON.parse(fileContent);
+    // 중복 방지를 위해 subscription 전체를 jsonb로 저장
+    const { error } = await supabase
+      .from("push_subscriptions")
+      .insert([{ subscription }]);
+
+    if (error) {
+      console.error("Supabase insert error:", error);
+      return NextResponse.json({ error: error.message }, { status: 500 });
     }
 
-    // 중복 확인 (endpoint 기준)
-    const exists = subscriptions.some(
-      (sub: any) => sub.endpoint === subscription.endpoint,
-    );
-
-    if (!exists) {
-      subscriptions.push(subscription);
-      // 파일에 저장
-      fs.writeFileSync(SUBS_FILE_PATH, JSON.stringify(subscriptions, null, 2));
-    }
-
-    return NextResponse.json({ success: true, message: "Subscribed!" });
+    return NextResponse.json({ success: true });
   } catch (error) {
-    console.error("Subscription error:", error);
-    return NextResponse.json({ error: "Failed to subscribe" }, { status: 500 });
+    console.error("Subscribe API error:", error);
+    return NextResponse.json({ error: "Invalid request" }, { status: 400 });
   }
 }

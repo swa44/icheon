@@ -47,14 +47,13 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 
-  // 알림 발송 로직 (비동기로 실행되며 에러가 발생해도 응답에는 영향 없음)
-  const SUBS_FILE_PATH = path.join(process.cwd(), "subscriptions.json");
+  // 알림 발송 로직 (비동기로 실행)
+  try {
+    const { data: subs, error: subsError } = await supabase
+      .from("push_subscriptions")
+      .select("subscription");
 
-  if (fs.existsSync(SUBS_FILE_PATH)) {
-    try {
-      const fileContent = fs.readFileSync(SUBS_FILE_PATH, "utf8");
-      const subscriptions = JSON.parse(fileContent);
-
+    if (!subsError && subs && subs.length > 0) {
       const payload = JSON.stringify({
         title: body.title || "새로운 소식",
         body: "이천시 국회의원 송석준의 새로운 소식이 등록되었습니다.",
@@ -62,15 +61,15 @@ export async function POST(request: Request) {
         icon: "/song/assets/196x196.png",
       });
 
-      subscriptions.forEach((sub: any) => {
-        webpush.sendNotification(sub, payload).catch((err) => {
-          // 만료된 토큰 처리 등은 생략
+      subs.forEach((row: any) => {
+        webpush.sendNotification(row.subscription, payload).catch((err) => {
+          // 만료된 토큰인 경우 DB에서 삭제하는 로직을 추가할 수 있습니다.
           console.error("Push send error", err);
         });
       });
-    } catch (pushError) {
-      console.error("Push notification logic error:", pushError);
     }
+  } catch (pushError) {
+    console.error("Push notification logic error:", pushError);
   }
 
   return NextResponse.json({ success: true, post: data[0] });
