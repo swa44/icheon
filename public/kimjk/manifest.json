@@ -1,0 +1,17 @@
+{
+  "name": "이천시의원 김재국",
+  "short_name": "시의원김재국",
+  "start_url": "/kimjk",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "scope": "/kimjk/",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/kimjk/assets/logo_196.png",
+      "sizes": "196x196",
+      "type": "image/png"
+    }
+  ]
+}

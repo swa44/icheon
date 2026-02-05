@@ -1,0 +1,17 @@
+{
+  "name": "이천시 국회의원 송석준",
+  "short_name": "국회의원송석준",
+  "start_url": "/song",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "scope": "/song/",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/song/assets/logo1_196.png",
+      "sizes": "196x196",
+      "type": "image/png"
+    }
+  ]
+}
