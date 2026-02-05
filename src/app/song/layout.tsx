@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./song-styles.css";
+import "./song.css";
 
 export const metadata: Metadata = {
   title: "이천시 국회의원 송석준",
