@@ -1,13 +1,5 @@
-const CACHE_NAME = "song-v1";
-const ASSETS_TO_CACHE = [
-  "/song/",
-  "/song/index.html",
-  "/song/style.css",
-  "/song/nav-guide.js",
-  "/song/video-delay.js",
-  "/song/manifest.json",
-  "/song/assets/196x196.png",
-];
+const CACHE_NAME = "song-v2";
+const ASSETS_TO_CACHE = ["/song/manifest.json", "/song/assets/196x196.png"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
