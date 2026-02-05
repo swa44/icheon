@@ -60,22 +60,40 @@ export default function PushSubscription() {
     }
   };
 
+  const unsubscribeFromPush = async () => {
+    if (!registration) return;
+
+    if (!confirm("알림 수신을 해제하시겠습니까?")) return;
+
+    try {
+      const sub = await registration.pushManager.getSubscription();
+      if (sub) {
+        await sub.unsubscribe();
+        setIsSubscribed(false);
+        alert("알림 해제가 완료되었습니다.");
+      }
+    } catch (error) {
+      console.error("Failed to unsubscribe:", error);
+      alert("알림 해제 중 오류가 발생했습니다.");
+    }
+  };
+
   return (
     <div>
       {!isSubscribed ? (
         <button
           onClick={subscribeToPush}
-          className="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-1.5 px-3 text-xs rounded-full shadow-sm flex items-center gap-1.5 transition-all"
+          className="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-1.5 px-3 text-xs rounded-full shadow-sm flex items-center gap-1.5 transition-all text-nowrap"
         >
           <i className="fas fa-bell text-[#e61e2b]"></i>
           <span>알림 받기</span>
         </button>
       ) : (
         <button
-          className="bg-gray-50 text-gray-400 font-medium py-1.5 px-3 text-xs rounded-full cursor-default flex items-center gap-1.5"
-          disabled
+          onClick={unsubscribeFromPush}
+          className="bg-green-50 hover:bg-green-100 text-green-700 font-medium py-1.5 px-3 text-xs rounded-full flex items-center gap-1.5 transition-all text-nowrap"
         >
-          <i className="fas fa-check text-green-500"></i>
+          <i className="fas fa-check"></i>
           <span>알림 ON</span>
         </button>
       )}
