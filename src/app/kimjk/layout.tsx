@@ -11,11 +11,15 @@ export const metadata: Metadata = {
     title: "이천시의원 김재국",
     description: "시민의 일상을 바꾸는 생활정치",
     images: [
-      {
-        url: "https://xn--hu5bi8g.com/kimjk/assets/logo_196.png",
-        width: 196,
-        height: 196,
-      },
+      "https://postfiles.pstatic.net/MjAyNjAxMTJfOTIg/MDAxNzY4MjAyNjYzODQ1.keP3S4A7Arj6rJsR8LLMaoViqBEvKJ7DNeZX-Iqu4v8g.MGVYluCiiiVyKsqakc-2aYooUzDyosXmrSUAhfLm4EAg.JPEG/meta.jpg?type=w966",
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "이천시의원 김재국",
+    description: "시민의 일상을 바꾸는 생활정치",
+    images: [
+      "https://postfiles.pstatic.net/MjAyNjAxMTJfOTIg/MDAxNzY4MjAyNjYzODQ1.keP3S4A7Arj6rJsR8LLMaoViqBEvKJ7DNeZX-Iqu4v8g.MGVYluCiiiVyKsqakc-2aYooUzDyosXmrSUAhfLm4EAg.JPEG/meta.jpg?type=w966",
     ],
   },
   icons: {
