@@ -33,6 +33,19 @@ export default function PushSubscription() {
   }, []);
 
   const subscribeToPush = async () => {
+    // 앱으로 실행 중인지 확인 (PWA 모드 여부)
+    const isStandalone =
+      window.matchMedia("(display-mode: standalone)").matches ||
+      (navigator as any).standalone;
+
+    // 모바일 기기이면서 설치되지 않은 경우 안내 (개발 모드는 제외)
+    if (!isStandalone && process.env.NODE_ENV !== "development") {
+      alert(
+        "알림을 받으시려면 앱 설치가 필요합니다.\n하단의 [앱 설치] 버튼을 눌러 홈 화면에 추가한 뒤 다시 시도해 주세요.",
+      );
+      return;
+    }
+
     if (!registration) return;
 
     try {
