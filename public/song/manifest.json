@@ -5,6 +5,9 @@
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
+  "description": "이천시 국회의원 송석준의 의정활동 소식과 정보를 확인하세요.",
+  "categories": ["politics", "news", "government"],
+  "id": "/song",
   "scope": "/song/",
   "orientation": "portrait",
   "icons": [
@@ -12,6 +15,31 @@
       "src": "/song/assets/logo1_196.png",
       "sizes": "196x196",
       "type": "image/png"
+    },
+    {
+      "src": "/song/assets/512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/song/assets/screen1.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/song/assets/screen2.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/song/assets/screen3.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow"
     }
   ]
 }
