@@ -9,7 +9,17 @@ export const metadata: Metadata = {
     type: "website",
     title: "국회의원 송석준",
     description: "상생과 조화의 고장 이천시",
-    images: ["/song/assets/logo_196.png"],
+    images: [
+      "https://postfiles.pstatic.net/MjAyNTAyMjdfMTMz/MDAxNzQwNjM3NDQwMjc1.cvm6icjdppMKIs28o4GQY8YJtYj7Vydz0LuO42JS9WYg.Nv2Nj2w2Ps6GaS1ZY1QaR-RX3Dmiy-ojQt-sTmd-wvkg.JPEG/0.jpg?type=w966",
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "국회의원 송석준",
+    description: "상생과 조화의 고장 이천시",
+    images: [
+      "https://postfiles.pstatic.net/MjAyNTAyMjdfMTMz/MDAxNzQwNjM3NDQwMjc1.cvm6icjdppMKIs28o4GQY8YJtYj7Vydz0LuO42JS9WYg.Nv2Nj2w2Ps6GaS1ZY1QaR-RX3Dmiy-ojQt-sTmd-wvkg.JPEG/0.jpg?type=w966",
+    ],
   },
   icons: {
     icon: [
