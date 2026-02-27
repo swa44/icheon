@@ -74,10 +74,18 @@ export default function PushSubscription() {
           setDeferredPrompt(null);
         }
       } else {
-        // 안드로이드인데 설치 프롬프트가 없을 때 (이미 설치됨, 혹은 준비 안됨)
-        alert(
-          "앱 설치 팝업이 뜨지 않는다면,\n브라우저 우측 상단 메뉴(⋮)에서 [앱 설치] 또는 [홈 화면에 추가]를 직접 눌러주세요.",
-        );
+        // 안드로이드인데 설치 프롬프트가 없을 때
+        const userAgent = navigator.userAgent;
+        // 카카오톡이나 네이버 인앱 브라우저인지 확인
+        if (userAgent.includes("KAKAOTALK") || userAgent.includes("NAVER")) {
+          alert(
+            "카카오톡/네이버 내부에서는 앱 설치가 제한될 수 있습니다.\n\n우측 하단(또는 상단) 메뉴 [⋮]를 누르고\n[다른 브라우저로 열기]를 선택해주세요.",
+          );
+        } else {
+          alert(
+            "앱 설치 팝업이 뜨지 않는다면,\n브라우저 우측 상단 메뉴(⋮)에서 [앱 설치] 또는 [홈 화면에 추가]를 직접 눌러주세요.",
+          );
+        }
       }
       return;
     }

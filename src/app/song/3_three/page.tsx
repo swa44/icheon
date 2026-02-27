@@ -61,50 +61,50 @@ export default function SongThree() {
 
         <div className="content-section" style={{ marginBottom: "50px" }}>
           <VideoPlayer
-            videoId="r_ojxRuBHQs"
-            title={
-              <>
-                <span className="badge">법사위</span>
-                <span>지금이 1882년? 초유의 국방예산 미지급 사태</span>
-              </>
-            }
-          />
-
-          <VideoPlayer
-            videoId="7kOeHNxcA1Q"
-            title={
-              <>
-                <span className="badge">정치시그널</span>
-                <span>
-                  송석준 의원, 당게가 왜 지금 이슈? 지금은 민주당 폭주를 향해 한
-                  목소리를 낼 때!
-                </span>
-              </>
-            }
-          />
-
-          <VideoPlayer
-            videoId="XNH1CpeV_Ak"
-            title={
-              <>
-                <span className="badge">성명서</span>
-                <span>종로 뺨은 정권이 때렸는데, 돌은 왜 동지에게 던지나?</span>
-              </>
-            }
-          />
-
-          <VideoPlayer
-            videoId="fMASSzbXYLw"
+            videoId="shapl9SEoNc"
             title={
               <>
                 <span className="badge">인터뷰</span>
                 <span>
-                  방탄입법에는 전광석화! 관세협상에는 무관심한 이재명정부!
+                  이재명 정부 부동산정책, 시장을 대하는 오만한 태도부터 문제!
                 </span>
               </>
             }
           />
+        </div>
 
+        <VideoPlayer
+          videoId="vADtaO0KyAQ"
+          title={
+            <>
+              <span className="badge">설 인사</span>
+              <span>온가족이 함께 행복한 설 명절 보내세요</span>
+            </>
+          }
+        />
+
+        <VideoPlayer
+          videoId="yfwn2ZLNLt0"
+          title={
+            <>
+              <span className="badge">의정보고</span>
+              <span>
+                지방도 수도권도 함께 살 길… 송석준, 자연보전권역 규제개선 신호탄
+              </span>
+            </>
+          }
+        />
+
+        <VideoPlayer
+          videoId="LRhtdHIzqNI"
+          title={
+            <>
+              <span className="badge">의정보고</span>
+              <span>"현장에서 답을 찾겠습니다" 찾아가는 의정보고회</span>
+            </>
+          }
+        />
+        {/* 
           <VideoPlayer
             videoId="gpPbScrAHVs"
             title={
@@ -117,7 +117,7 @@ export default function SongThree() {
               </>
             }
           />
-        </div>
+        </div>*/}
 
         <div id="navGuide" className="nav-guide">
           <div className="nav-guide-content">

@@ -8,7 +8,84 @@ export default function SongTwo() {
           <img src="/song/assets/2509home.jpg" width="100%" />
         </div>
         <div className="activity-section">
-          <h2 className="section-title">의정보고서</h2>
+          <h2 className="section-title">지역/국회 의정활동</h2>
+
+          <div className="activity-card">
+            <div className="activity-title">
+              <span>•시내권 의정보고회</span>
+            </div>
+            <img src="/song/assets/260301.jpg" width="100%" loading="lazy" />
+          </div>
+
+          <div className="activity-card">
+            <div className="activity-title">
+              <span>•대월면 의정보고회</span>
+            </div>
+            <img src="/song/assets/260302.jpg" width="100%" loading="lazy" />
+          </div>
+
+          <div className="activity-card">
+            <div className="activity-title">
+              <span>•부발읍 의정보고회</span>
+            </div>
+            <img src="/song/assets/260303.jpg" width="100%" loading="lazy" />
+          </div>
+
+          <div className="activity-card">
+            <div className="activity-title">
+              <span>•호법면 의정보고회</span>
+            </div>
+            <img src="/song/assets/260304.jpg" width="100%" loading="lazy" />
+          </div>
+
+          <div className="activity-card">
+            <div className="activity-title">
+              <span>•마장면 의정보고회</span>
+            </div>
+            <img src="/song/assets/260305.jpg" width="100%" loading="lazy" />
+          </div>
+
+          <div className="activity-card">
+            <div className="activity-title">
+              <span>•백사면 의정보고회</span>
+            </div>
+            <img src="/song/assets/260306.jpg" width="100%" loading="lazy" />
+          </div>
+
+          <div className="activity-card">
+            <div className="activity-title">
+              <span>•신둔면 의정보고회</span>
+            </div>
+            <img src="/song/assets/260307.jpg" width="100%" loading="lazy" />
+          </div>
+
+          <div className="activity-card">
+            <div className="activity-title">
+              <span>•장호원읍 의정보고회</span>
+            </div>
+            <img src="/song/assets/260308.jpg" width="100%" loading="lazy" />
+          </div>
+
+          <div className="activity-card">
+            <div className="activity-title">
+              <span>•율면 의정보고회</span>
+            </div>
+            <img src="/song/assets/260309.jpg" width="100%" loading="lazy" />
+          </div>
+
+          <div className="activity-card">
+            <div className="activity-title">
+              <span>•모가면 의정보고회</span>
+            </div>
+            <img src="/song/assets/260310.jpg" width="100%" loading="lazy" />
+          </div>
+
+          <div className="activity-card">
+            <div className="activity-title">
+              <span>•설성면 의정보고회</span>
+            </div>
+            <img src="/song/assets/260311.jpg" width="100%" loading="lazy" />
+          </div>
 
           <img
             src="/song/assets/202601_1.jpg"
@@ -79,61 +156,64 @@ export default function SongTwo() {
 
           <div className="news-list" style={{ marginBottom: "50px" }}>
             <a
-              href="https://www.shinailbo.co.kr/news/articleView.html?idxno=2174267"
+              href="https://news.bbsi.co.kr/news/articleView.html?idxno=4065802"
               target="_blank"
               rel="noopener"
               className="article-card"
             >
               <div className="activity-title">
                 <span>
-                  송석준 “이천시 2026년 환경 관련 국비 400억 확보” (‘26.01.05.
-                  보도)
+                  송석준 “日반출 된 이천오층석탑과 환수염원탑 교환하고 <br />
+                  명품 도자기까지” (2026.02.05 보도)
                 </span>
               </div>
             </a>
 
             <a
-              href="https://www.asiaa.co.kr/news/articleView.html?idxno=236636"
+              href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=426168"
               target="_blank"
               rel="noopener"
               className="article-card"
             >
               <div className="activity-title">
                 <span>
-                  송석준 의원, 이천시 교통 인프라 국비 1009억 확보 (’26.01.12.
-                  보도)
+                  송석준 의원, “반도체 산업 경쟁력 강화 특별법 본회의 통과"
+                  <br />
+                  (2026.02.05. 보도)
                 </span>
               </div>
             </a>
 
             <a
-              href="https://www.m-i.kr/news/articleView.html?idxno=1330966"
+              href="https://www.kyeonggi.com/article/20260225580311"
               target="_blank"
               rel="noopener"
               className="article-card"
             >
               <div className="activity-title">
                 <span>
-                  이천시, 장호원읍 생활나눔복합센터 건립 착공식 개최 (’26.01.29
-                  보도)
+                  송석준, 한강사랑포럼 2기 용인회의 개최…
+                  <br />
+                  "자연보전권역 중첩규제, 더는 성역 아니다"(2026.02.25. 보도)
                 </span>
               </div>
             </a>
 
             <a
-              href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=412871"
+              href="https://n.news.naver.com/mnews/article/021/0002773496?sid=102"
               target="_blank"
               rel="noopener"
               className="article-card"
             >
               <div className="activity-title">
                 <span>
-                  송석준, “장호원‧설성 체육공원 축구장 인조잔디 교체에 총 8억원
-                  확보" (‘26.01.02. 보도)
+                  6년간 법관 180명 피소됐는데… 고소·고발 더 폭증할 우려
+                  <br />
+                  (2026.02.26 보도)
                 </span>
               </div>
             </a>
-
+            {/*
             <a
               href="https://n.news.naver.com/mnews/article/449/0000332898?sid=100"
               target="_blank"
@@ -147,7 +227,6 @@ export default function SongTwo() {
                 </span>
               </div>
             </a>
-
             <a
               href="https://news.kbs.co.kr/news/pc/view/view.do?ncd=8471357&ref=A"
               target="_blank"
@@ -161,7 +240,7 @@ export default function SongTwo() {
                   윤인구입니다] (‘26.01.29)
                 </span>
               </div>
-            </a>
+            </a>*/}
           </div>
         </div>
         <div id="navGuide" className="nav-guide">

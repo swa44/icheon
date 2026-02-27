@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./song.css";
 
 export const metadata: Metadata = {
+  // ... 생략 (이후 내용은 기존과 동일)
   title: "이천시 국회의원 송석준",
   description: "상생과 조화의 고장 이천시",
   openGraph: {
