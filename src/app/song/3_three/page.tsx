@@ -61,6 +61,16 @@ export default function SongThree() {
 
         <div className="content-section" style={{ marginBottom: "50px" }}>
           <VideoPlayer
+            videoId="LRhtdHIzqNI"
+            title={
+              <>
+                <span className="badge">의정보고</span>
+                <span>"현장에서 답을 찾겠습니다" 찾아가는 의정보고회</span>
+              </>
+            }
+          />
+
+          <VideoPlayer
             videoId="shapl9SEoNc"
             title={
               <>
@@ -71,40 +81,31 @@ export default function SongThree() {
               </>
             }
           />
-        </div>
 
-        <VideoPlayer
-          videoId="vADtaO0KyAQ"
-          title={
-            <>
-              <span className="badge">설 인사</span>
-              <span>온가족이 함께 행복한 설 명절 보내세요</span>
-            </>
-          }
-        />
+          <VideoPlayer
+            videoId="vADtaO0KyAQ"
+            title={
+              <>
+                <span className="badge">설 인사</span>
+                <span>온가족이 함께 행복한 설 명절 보내세요</span>
+              </>
+            }
+          />
 
-        <VideoPlayer
-          videoId="yfwn2ZLNLt0"
-          title={
-            <>
-              <span className="badge">의정보고</span>
-              <span>
-                지방도 수도권도 함께 살 길… 송석준, 자연보전권역 규제개선 신호탄
-              </span>
-            </>
-          }
-        />
+          <VideoPlayer
+            videoId="yfwn2ZLNLt0"
+            title={
+              <>
+                <span className="badge">의정보고</span>
+                <span>
+                  지방도 수도권도 함께 살 길… 송석준, 자연보전권역 규제개선
+                  신호탄
+                </span>
+              </>
+            }
+          />
 
-        <VideoPlayer
-          videoId="LRhtdHIzqNI"
-          title={
-            <>
-              <span className="badge">의정보고</span>
-              <span>"현장에서 답을 찾겠습니다" 찾아가는 의정보고회</span>
-            </>
-          }
-        />
-        {/* 
+          {/* 
           <VideoPlayer
             videoId="gpPbScrAHVs"
             title={
@@ -117,8 +118,8 @@ export default function SongThree() {
               </>
             }
           />
-        </div>*/}
-
+        */}
+        </div>
         <div id="navGuide" className="nav-guide">
           <div className="nav-guide-content">
             <i className="fas fa-hand-point-down"></i>

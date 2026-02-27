@@ -155,6 +155,36 @@ export default function SongTwo() {
             각 카드를 클릭하면 해당 기사로 연결됩니다
           </p>
 
+          <a
+            href="https://www.kyeonggi.com/article/20260225580311"
+            target="_blank"
+            rel="noopener"
+            className="article-card"
+          >
+            <div className="activity-title">
+              <span>
+                송석준, 한강사랑포럼 2기 용인회의 개최…
+                <br />
+                "자연보전권역 중첩규제, 더는 성역 아니다"(2026.02.25. 보도)
+              </span>
+            </div>
+          </a>
+
+          <a
+            href="https://n.news.naver.com/mnews/article/021/0002773496?sid=102"
+            target="_blank"
+            rel="noopener"
+            className="article-card"
+          >
+            <div className="activity-title">
+              <span>
+                6년간 법관 180명 피소됐는데… 고소·고발 더 폭증할 우려
+                <br />
+                (2026.02.26 보도)
+              </span>
+            </div>
+          </a>
+
           <div className="news-list" style={{ marginBottom: "50px" }}>
             <a
               href="https://news.bbsi.co.kr/news/articleView.html?idxno=4065802"
@@ -185,35 +215,6 @@ export default function SongTwo() {
               </div>
             </a>
 
-            <a
-              href="https://www.kyeonggi.com/article/20260225580311"
-              target="_blank"
-              rel="noopener"
-              className="article-card"
-            >
-              <div className="activity-title">
-                <span>
-                  송석준, 한강사랑포럼 2기 용인회의 개최…
-                  <br />
-                  "자연보전권역 중첩규제, 더는 성역 아니다"(2026.02.25. 보도)
-                </span>
-              </div>
-            </a>
-
-            <a
-              href="https://n.news.naver.com/mnews/article/021/0002773496?sid=102"
-              target="_blank"
-              rel="noopener"
-              className="article-card"
-            >
-              <div className="activity-title">
-                <span>
-                  6년간 법관 180명 피소됐는데… 고소·고발 더 폭증할 우려
-                  <br />
-                  (2026.02.26 보도)
-                </span>
-              </div>
-            </a>
             {/*
             <a
               href="https://n.news.naver.com/mnews/article/449/0000332898?sid=100"
