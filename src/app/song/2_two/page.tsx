@@ -87,6 +87,7 @@ export default function SongTwo() {
             <img src="/song/assets/260311.jpg" width="100%" loading="lazy" />
           </div>
 
+          {/*
           <img
             src="/song/assets/202601_1.jpg"
             style={{ width: "100%", marginBottom: "10px", display: "block" }}
@@ -148,7 +149,7 @@ export default function SongTwo() {
             alt="의정보고 이미지 12"
             loading="lazy"
           />
-
+*/}
           <h2 className="section-title">보도자료</h2>
           <p className="section-subtitle">
             각 카드를 클릭하면 해당 기사로 연결됩니다
