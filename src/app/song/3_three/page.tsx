@@ -145,7 +145,7 @@ export default function SongThree() {
           />
 
           <VideoPlayer
-            videoId="nGTCq1FmWM"
+            videoId="-nGTCq1FmWM"
             title={
               <>
                 <span className="badge">법사위</span>
