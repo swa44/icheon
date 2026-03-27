@@ -21,14 +21,14 @@ export default function SongTwo() {
             <div className="activity-title">
               <span>3/5 사법파괴 3법 거부권 촉구대회</span>
             </div>
-            <img src="/song/assets/260402.jpg" width="100%" loading="lazy" />
+            <img src="/song/assets/2604021.jpg" width="100%" loading="lazy" />
           </div>
 
           <div className="activity-card">
             <div className="activity-title">
               <span>3/6 코로나19 대응실태 현안질의 요구</span>
             </div>
-            <img src="/song/assets/260403.jpg" width="100%" loading="lazy" />
+            <img src="/song/assets/2604031.jpg" width="100%" loading="lazy" />
           </div>
 
           <div className="activity-card">
@@ -63,7 +63,7 @@ export default function SongTwo() {
             <div className="activity-title">
               <span>3/20 공소청법 반대 필리버스터</span>
             </div>
-            <img src="/song/assets/260408.jpg" width="100%" loading="lazy" />
+            <img src="/song/assets/2604081.jpg" width="100%" loading="lazy" />
           </div>
 
           <div className="activity-card">
