@@ -245,6 +245,10 @@ main {
   box-shadow: var(--shadow-md);
 }
 
+.news-list .article-card {
+  background: #e6e6e6; /* 원하는 색상값 */
+}
+
 .activity-title {
   font-size: clamp(0.95rem, 2.5vw, 1.1rem);
   font-weight: 600;

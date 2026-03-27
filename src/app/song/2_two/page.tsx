@@ -12,79 +12,79 @@ export default function SongTwo() {
 
           <div className="activity-card">
             <div className="activity-title">
-              <span>•시내권 의정보고회</span>
+              <span>3/2 대월 자채농요 향토유산지정 축하행사</span>
             </div>
-            <img src="/song/assets/260301.jpg" width="100%" loading="lazy" />
+            <img src="/song/assets/260401.jpg" width="100%" loading="lazy" />
           </div>
 
           <div className="activity-card">
             <div className="activity-title">
-              <span>•대월면 의정보고회</span>
+              <span>3/5 사법파괴 3법 거부권 촉구대회</span>
             </div>
-            <img src="/song/assets/260302.jpg" width="100%" loading="lazy" />
+            <img src="/song/assets/260402.jpg" width="100%" loading="lazy" />
           </div>
 
           <div className="activity-card">
             <div className="activity-title">
-              <span>•부발읍 의정보고회</span>
+              <span>3/6 코로나19 대응실태 현안질의 요구</span>
             </div>
-            <img src="/song/assets/260303.jpg" width="100%" loading="lazy" />
+            <img src="/song/assets/260403.jpg" width="100%" loading="lazy" />
           </div>
 
           <div className="activity-card">
             <div className="activity-title">
-              <span>•호법면 의정보고회</span>
+              <span>3/7 이천제일고 총동문 장학회 정기총회</span>
             </div>
-            <img src="/song/assets/260304.jpg" width="100%" loading="lazy" />
+            <img src="/song/assets/260404.jpg" width="100%" loading="lazy" />
           </div>
 
           <div className="activity-card">
             <div className="activity-title">
-              <span>•마장면 의정보고회</span>
+              <span>3/8 이천시 청년 소상공인회 척사대회</span>
             </div>
-            <img src="/song/assets/260305.jpg" width="100%" loading="lazy" />
+            <img src="/song/assets/260405.jpg" width="100%" loading="lazy" />
           </div>
 
           <div className="activity-card">
             <div className="activity-title">
-              <span>•백사면 의정보고회</span>
+              <span>3/14 동원대 CEO 총원우회 산악동호회 시산제</span>
             </div>
-            <img src="/song/assets/260306.jpg" width="100%" loading="lazy" />
+            <img src="/song/assets/260406.jpg" width="100%" loading="lazy" />
           </div>
 
           <div className="activity-card">
             <div className="activity-title">
-              <span>•신둔면 의정보고회</span>
+              <span>3/20 청미노인복지관 국회 방문</span>
             </div>
-            <img src="/song/assets/260307.jpg" width="100%" loading="lazy" />
+            <img src="/song/assets/260407.jpg" width="100%" loading="lazy" />
           </div>
 
           <div className="activity-card">
             <div className="activity-title">
-              <span>•장호원읍 의정보고회</span>
+              <span>3/20 공소청법 반대 필리버스터</span>
             </div>
-            <img src="/song/assets/260308.jpg" width="100%" loading="lazy" />
+            <img src="/song/assets/260408.jpg" width="100%" loading="lazy" />
           </div>
 
           <div className="activity-card">
             <div className="activity-title">
-              <span>•율면 의정보고회</span>
+              <span>3/24 이천향교 석전 봉행</span>
             </div>
-            <img src="/song/assets/260309.jpg" width="100%" loading="lazy" />
+            <img src="/song/assets/260409.jpg" width="100%" loading="lazy" />
           </div>
 
           <div className="activity-card">
             <div className="activity-title">
-              <span>•모가면 의정보고회</span>
+              <span>3/25 한강사랑포럼 제2기 3차 국회토론회</span>
             </div>
-            <img src="/song/assets/260310.jpg" width="100%" loading="lazy" />
+            <img src="/song/assets/260410.jpg" width="100%" loading="lazy" />
           </div>
 
           <div className="activity-card">
             <div className="activity-title">
-              <span>•설성면 의정보고회</span>
+              <span>3/25 국정조사특별위원회 회의</span>
             </div>
-            <img src="/song/assets/260311.jpg" width="100%" loading="lazy" />
+            <img src="/song/assets/260411.jpg" width="100%" loading="lazy" />
           </div>
 
           {/*
@@ -155,67 +155,67 @@ export default function SongTwo() {
             각 카드를 클릭하면 해당 기사로 연결됩니다
           </p>
 
-          <a
-            href="https://www.kyeonggi.com/article/20260225580311"
-            target="_blank"
-            rel="noopener"
-            className="article-card"
-          >
-            <div className="activity-title">
-              <span>
-                송석준, 한강사랑포럼 2기 용인회의 개최…
-                <br />
-                "자연보전권역 중첩규제, 더는 성역 아니다"(2026.02.25. 보도)
-              </span>
-            </div>
-          </a>
-
-          <a
-            href="https://n.news.naver.com/mnews/article/021/0002773496?sid=102"
-            target="_blank"
-            rel="noopener"
-            className="article-card"
-          >
-            <div className="activity-title">
-              <span>
-                6년간 법관 180명 피소됐는데… 고소·고발 더 폭증할 우려
-                <br />
-                (2026.02.26 보도)
-              </span>
-            </div>
-          </a>
-
           <div className="news-list" style={{ marginBottom: "50px" }}>
             <a
-              href="https://news.bbsi.co.kr/news/articleView.html?idxno=4065802"
+              href="https://www.kihoilbo.co.kr/news/articleView.html?idxno=3015624"
               target="_blank"
               rel="noopener"
               className="article-card"
             >
               <div className="activity-title">
                 <span>
-                  송석준 “日반출 된 이천오층석탑과 환수염원탑 교환하고 <br />
-                  명품 도자기까지” (2026.02.05 보도)
+                  송석준 의원, 수도권 과잉규제 해소 토론회 개최…
+                  <br />
+                  건의문 전달 예정 (2026.03.09. 보도)
                 </span>
               </div>
             </a>
 
             <a
-              href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=426168"
+              href="https://n.news.naver.com/mnews/article/666/0000098593?sid=100"
               target="_blank"
               rel="noopener"
               className="article-card"
             >
               <div className="activity-title">
                 <span>
-                  송석준 의원, “반도체 산업 경쟁력 강화 특별법 본회의 통과"
+                  송석준 “대통령님, 말로만 하지 말고 악법부터 폐지하라”
                   <br />
-                  (2026.02.05. 보도)
+                  (2026.03.09. 보도)
                 </span>
               </div>
             </a>
 
-            {/*
+            <a
+              href="https://www.newsworks.co.kr/news/articleView.html?idxno=833539"
+              target="_blank"
+              rel="noopener"
+              className="article-card"
+            >
+              <div className="activity-title">
+                <span>
+                  송석준 "쟁의·소송 지옥 될 노란봉투법 시행 즉각 중단하라"{" "}
+                  <br />
+                  (2026.03.10. 보도)
+                </span>
+              </div>
+            </a>
+
+            <a
+              href="https://n.news.naver.com/mnews/article/448/0000596897?sid=100"
+              target="_blank"
+              rel="noopener"
+              className="article-card"
+            >
+              <div className="activity-title">
+                <span>
+                  송석준 "추미애, 황당무계한 안건으로 회의하는 척"
+                  <br />
+                  [현장영상] (2026.03.16. 보도)
+                </span>
+              </div>
+            </a>
+
             <a
               href="https://n.news.naver.com/mnews/article/449/0000332898?sid=100"
               target="_blank"
@@ -224,25 +224,70 @@ export default function SongTwo() {
             >
               <div className="activity-title">
                 <span>
-                  송석준 “석고대죄는 정청래가 해야…언어도단·적반하장”
-                  [정치시그널] (‘26.01.21)
+                  송석준, 영세사업자 화물차 유류, ‘교통·에너지·환경세도 100만원
+                  환급’ 추진 <br />
+                  (2026.03.23. 보도)
                 </span>
               </div>
             </a>
+
             <a
-              href="https://news.kbs.co.kr/news/pc/view/view.do?ncd=8471357&ref=A"
+              href="https://www.ilyosisa.co.kr/mobile/article.html?no=254898"
               target="_blank"
               rel="noopener"
               className="article-card"
             >
               <div className="activity-title">
                 <span>
-                  송석준 “한동훈 제명하면 국민의힘 분열해 자멸할 것…지선에서
-                  승리할 수 있는 역할 한동훈이 맡아야” [세상의 모든 정보
-                  윤인구입니다] (‘26.01.29)
+                  &lt;일요대담&gt; 국민의힘 송석준 의원 (인터뷰, 2026.03.24.
+                  보도)
                 </span>
               </div>
-            </a>*/}
+            </a>
+
+            <a
+              href="https://www.joongboo.com/news/articleView.html?idxno=363720600"
+              target="_blank"
+              rel="noopener"
+              className="article-card"
+            >
+              <div className="activity-title">
+                <span>
+                  송석준 “경강선 출근 시간 배차 간격 조정… <br />
+                  대기시간 최대 10분 단축” (2026.03.24. 보도)
+                </span>
+              </div>
+            </a>
+
+            <a
+              href="https://www.joongboo.com/news/articleView.html?idxno=363720764"
+              target="_blank"
+              rel="noopener"
+              className="article-card"
+            >
+              <div className="activity-title">
+                <span>
+                  [정치돋보기] ‘수도권 vs 지방’ 이분법 넘어, 이제는 ‘상생의
+                  성장판’ 열 때 <br />
+                  (2026.03.25. 보도)
+                </span>
+              </div>
+            </a>
+
+            <a
+              href="https://www.breaknews.com/1194894"
+              target="_blank"
+              rel="noopener"
+              className="article-card"
+            >
+              <div className="activity-title">
+                <span>
+                  송석준 국민의힘 의원, 수도권 중첩규제 해소위한 정책토론회개최
+                  <br />
+                  (2026.03.25. 보도)
+                </span>
+              </div>
+            </a>
           </div>
         </div>
         <div id="navGuide" className="nav-guide">
