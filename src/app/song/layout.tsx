@@ -30,16 +30,7 @@ export const metadata: Metadata = {
       { url: "/song/assets/128x128.png", sizes: "128x128", type: "image/png" },
       { url: "/song/assets/196x196.png", sizes: "196x196", type: "image/png" },
     ],
-    apple: [
-      { url: "/song/assets/57x57.png", sizes: "57x57" },
-      { url: "/song/assets/60x60.png", sizes: "60x60" },
-      { url: "/song/assets/72x72.png", sizes: "72x72" },
-      { url: "/song/assets/76x76.png", sizes: "76x76" },
-      { url: "/song/assets/114x114.png", sizes: "114x114" },
-      { url: "/song/assets/120x120.png", sizes: "120x120" },
-      { url: "/song/assets/144x144.png", sizes: "144x144" },
-      { url: "/song/assets/152x152.png", sizes: "152x152" },
-    ],
+    apple: [{ url: "/song/assets/logo1_180.png", sizes: "180x180" }],
   },
   manifest: "/song/manifest.json",
   appleWebApp: {
