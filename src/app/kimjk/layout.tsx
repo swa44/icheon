@@ -30,16 +30,7 @@ export const metadata: Metadata = {
       { url: "/kimjk/assets/128x128.png", sizes: "128x128", type: "image/png" },
       { url: "/kimjk/assets/196x196.png", sizes: "196x196", type: "image/png" },
     ],
-    apple: [
-      { url: "/kimjk/assets/57x57.png", sizes: "57x57" },
-      { url: "/kimjk/assets/60x60.png", sizes: "60x60" },
-      { url: "/kimjk/assets/72x72.png", sizes: "72x72" },
-      { url: "/kimjk/assets/76x76.png", sizes: "76x76" },
-      { url: "/kimjk/assets/114x114.png", sizes: "114x114" },
-      { url: "/kimjk/assets/120x120.png", sizes: "120x120" },
-      { url: "/kimjk/assets/144x144.png", sizes: "144x144" },
-      { url: "/kimjk/assets/152x152.png", sizes: "152x152" },
-    ],
+    apple: [{ url: "/kimjk/assets/logo1_180.png", sizes: "180x180" }],
   },
   manifest: "/kimjk/manifest.json",
 };
