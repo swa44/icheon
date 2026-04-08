@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { supabase } from "@/lib/supabase";
+import { supabase, supabaseAdmin } from "@/lib/supabase";
 import webpush from "web-push";
 import fs from "fs";
 import path from "path";
@@ -31,7 +31,7 @@ export async function GET() {
 export async function POST(request: Request) {
   const body = await request.json();
 
-  const { data, error } = await supabase
+  const { data, error } = await supabaseAdmin
     .from("posts")
     .insert([
       {
@@ -49,7 +49,7 @@ export async function POST(request: Request) {
 
   // 알림 발송 로직 (비동기로 실행)
   try {
-    const { data: subs, error: subsError } = await supabase
+    const { data: subs, error: subsError } = await supabaseAdmin
       .from("push_subscriptions")
       .select("id, subscription");
 
@@ -68,7 +68,7 @@ export async function POST(request: Request) {
             // 410 (Gone) 또는 404 (Not Found) 에러는 구독이 만료되었음을 의미함
             if (err.statusCode === 410 || err.statusCode === 404) {
               console.log(`Removing expired subscription: ${row.id}`);
-              await supabase
+              await supabaseAdmin
                 .from("push_subscriptions")
                 .delete()
                 .eq("id", row.id);
@@ -88,7 +88,7 @@ export async function POST(request: Request) {
 export async function PUT(request: Request) {
   const body = await request.json();
 
-  const { error } = await supabase
+  const { error } = await supabaseAdmin
     .from("posts")
     .update({
       title: body.title,
@@ -108,7 +108,7 @@ export async function PUT(request: Request) {
 export async function DELETE(request: Request) {
   const { id } = await request.json();
 
-  const { error } = await supabase.from("posts").delete().eq("id", id);
+  const { error } = await supabaseAdmin.from("posts").delete().eq("id", id);
 
   if (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });

@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
-import { supabase } from "@/lib/supabase";
+import { supabaseAdmin } from "@/lib/supabase";
 
 export const dynamic = "force-dynamic";
 
 export async function GET() {
-  const { data: suggestions, error } = await supabase
+  const { data: suggestions, error } = await supabaseAdmin
     .from("suggestions")
     .select("*")
     .order("created_at", { ascending: false });
@@ -19,7 +19,7 @@ export async function GET() {
 export async function POST(request: Request) {
   const body = await request.json();
 
-  const { data, error } = await supabase
+  const { data, error } = await supabaseAdmin
     .from("suggestions")
     .insert([
       {
@@ -41,7 +41,7 @@ export async function POST(request: Request) {
 export async function DELETE(request: Request) {
   const body = await request.json();
 
-  let query = supabase.from("suggestions").delete();
+  let query = supabaseAdmin.from("suggestions").delete();
 
   if (body.id) {
     query = query.eq("id", body.id);
