@@ -2,8 +2,6 @@
 
 import { useState, useRef } from "react";
 import Image from "next/image";
-import { supabase } from "@/lib/supabase";
-
 // UUID 생성 (이미지 파일명 중복 방지)
 const generateUUID = () => {
   return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
@@ -182,16 +180,16 @@ export default function AdminPage() {
         const webpBlob = await convertToWebP(file);
         const fileName = `${generateUUID()}.webp`;
 
-        const { error: uploadError } = await supabase.storage
-          .from("post-images")
-          .upload(fileName, webpBlob, { contentType: "image/webp" });
+        const formData = new FormData();
+        formData.append("file", new File([webpBlob], fileName, { type: "image/webp" }));
+        formData.append("fileName", fileName);
 
-        if (uploadError) throw uploadError;
-
-        const {
-          data: { publicUrl },
-        } = supabase.storage.from("post-images").getPublicUrl(fileName);
-
+        const res = await fetch("/api/upload", { method: "POST", body: formData });
+        if (!res.ok) {
+          const { error } = await res.json();
+          throw new Error(error);
+        }
+        const { publicUrl } = await res.json();
         return publicUrl;
       });
 
