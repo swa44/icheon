@@ -48,7 +48,7 @@ export default function SongHome() {
             </Link>
           </div>
         </div>
-
+        {/*
         <div className="hero-section">
           <img
             src="/song/assets/202605_1.webp"
@@ -56,7 +56,7 @@ export default function SongHome() {
             width="100%"
             loading="eager"
           />
-          {/*
+          
           <img
             src="/song/assets/202601_2.jpg"
             style={{
@@ -67,8 +67,8 @@ export default function SongHome() {
             }}
             alt="의정보고 이미지 2"
             loading="lazy"
-          />*/}
-        </div>
+          />
+        </div>*/}
 
         <div className="contact-profile-card" style={{ marginBottom: "0px" }}>
           <div className="profile-header">
