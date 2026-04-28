@@ -49,16 +49,14 @@ export default function SongHome() {
           </div>
         </div>
 
-        {/*
         <div className="hero-section">
-          
           <img
-            src="/song/assets/12home1.jpg"
+            src="/song/assets/202605_1.webp"
             alt="송석준 의원"
             width="100%"
             loading="eager"
           />
-          
+          {/*
           <img
             src="/song/assets/202601_2.jpg"
             style={{
@@ -69,9 +67,8 @@ export default function SongHome() {
             }}
             alt="의정보고 이미지 2"
             loading="lazy"
-          />
+          />*/}
         </div>
-        */}
 
         <div className="contact-profile-card" style={{ marginBottom: "0px" }}>
           <div className="profile-header">

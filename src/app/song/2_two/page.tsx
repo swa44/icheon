@@ -5,86 +5,96 @@ export default function SongTwo() {
     <div className="h-full">
       <main>
         <div className="content-section">
-          <img src="/song/assets/2509home.jpg" width="100%" />
+          <img src="/song/assets/2605d.webp" width="100%" />
         </div>
         <div className="activity-section">
           <h2 className="section-title">지역/국회 의정활동</h2>
 
           <div className="activity-card">
             <div className="activity-title">
-              <span>3/2 대월 자채농요 향토유산지정 축하행사</span>
+              <span>4/3 제27회 이천 백사 산수유 꽃축제</span>
             </div>
-            <img src="/song/assets/260401.jpg" width="100%" loading="lazy" />
+            <img src="/song/assets/260501.webp" width="100%" loading="lazy" />
           </div>
 
           <div className="activity-card">
             <div className="activity-title">
-              <span>3/5 사법파괴 3법 거부권 촉구대회</span>
+              <span>4/5 제27회 이천 도자기 마라톤대회</span>
             </div>
-            <img src="/song/assets/2604021.jpg" width="100%" loading="lazy" />
+            <img src="/song/assets/260502.webp" width="100%" loading="lazy" />
           </div>
 
           <div className="activity-card">
             <div className="activity-title">
-              <span>3/6 코로나19 대응실태 현안질의 요구</span>
+              <span>4/8 판교 스타트업 정책간담회</span>
             </div>
-            <img src="/song/assets/2604031.jpg" width="100%" loading="lazy" />
+            <img src="/song/assets/260503.webp" width="100%" loading="lazy" />
           </div>
 
           <div className="activity-card">
             <div className="activity-title">
-              <span>3/7 이천제일고 총동문 장학회 정기총회</span>
+              <span>
+                4/8 미래국토인프라혁신포럼 14차 세미나 ‘국가 인프라 기본법’ 입법
+                추진을 위한 토론회
+              </span>
             </div>
-            <img src="/song/assets/260404.jpg" width="100%" loading="lazy" />
+            <img src="/song/assets/260504.webp" width="100%" loading="lazy" />
           </div>
 
           <div className="activity-card">
             <div className="activity-title">
-              <span>3/8 이천시 청년 소상공인회 척사대회</span>
+              <span>4/9 국조특위 서울중앙지검 현장조사</span>
             </div>
-            <img src="/song/assets/260405.jpg" width="100%" loading="lazy" />
+            <img src="/song/assets/260505.webp" width="100%" loading="lazy" />
           </div>
 
           <div className="activity-card">
             <div className="activity-title">
-              <span>3/14 동원대 CEO 총원우회 산악동호회 시산제</span>
+              <span>4/9 뉴스핌 서울이코노믹포럼 토론</span>
             </div>
-            <img src="/song/assets/260406.jpg" width="100%" loading="lazy" />
+            <img src="/song/assets/260506.webp" width="100%" loading="lazy" />
           </div>
 
           <div className="activity-card">
             <div className="activity-title">
-              <span>3/20 청미노인복지관 국회 방문</span>
+              <span>4/10 SK하이닉스 하이패스 IC 현장 점검</span>
             </div>
-            <img src="/song/assets/260407.jpg" width="100%" loading="lazy" />
+            <img src="/song/assets/260507.webp" width="100%" loading="lazy" />
           </div>
 
           <div className="activity-card">
             <div className="activity-title">
-              <span>3/20 공소청법 반대 필리버스터</span>
+              <span>4/15 해병대 원로 위로 행사 및 준4군 체제 입법 설명회</span>
             </div>
-            <img src="/song/assets/2604081.jpg" width="100%" loading="lazy" />
+            <img src="/song/assets/260508.webp" width="100%" loading="lazy" />
           </div>
 
           <div className="activity-card">
             <div className="activity-title">
-              <span>3/24 이천향교 석전 봉행</span>
+              <span>4/20 제46회 장애인의 날 기념식</span>
             </div>
-            <img src="/song/assets/260409.jpg" width="100%" loading="lazy" />
+            <img src="/song/assets/260509.webp" width="100%" loading="lazy" />
           </div>
 
           <div className="activity-card">
             <div className="activity-title">
-              <span>3/25 한강사랑포럼 제2기 3차 국회토론회</span>
+              <span>4/23 채널A 정치시그널 출연</span>
             </div>
-            <img src="/song/assets/260410.jpg" width="100%" loading="lazy" />
+            <img src="/song/assets/260510.webp" width="100%" loading="lazy" />
           </div>
 
           <div className="activity-card">
             <div className="activity-title">
-              <span>3/25 국정조사특별위원회 회의</span>
+              <span>4/23 국조특위 감사원 현장조사</span>
             </div>
-            <img src="/song/assets/260411.jpg" width="100%" loading="lazy" />
+            <img src="/song/assets/260511.webp" width="100%" loading="lazy" />
+          </div>
+
+          <div className="activity-card">
+            <div className="activity-title">
+              <span>4/26 제40회 이천 도자기축제</span>
+            </div>
+            <img src="/song/assets/260512.webp" width="100%" loading="lazy" />
           </div>
 
           {/*
@@ -157,134 +167,182 @@ export default function SongTwo() {
 
           <div className="news-list" style={{ marginBottom: "50px" }}>
             <a
-              href="https://www.kihoilbo.co.kr/news/articleView.html?idxno=3015624"
+              href="https://n.news.naver.com/mnews/article/015/0005270375?sid=102"
               target="_blank"
               rel="noopener"
               className="article-card"
             >
               <div className="activity-title">
                 <span>
-                  송석준 의원, 수도권 과잉규제 해소 토론회 개최…
+                  감찰 기능 마비된 법원…2년간 판사 중징계 '0건' <br />
+                  (2026.04.02. 보도)
+                </span>
+              </div>
+            </a>
+
+            <a
+              href="https://n.news.naver.com/mnews/article/448/0000601282?sid=100"
+              target="_blank"
+              rel="noopener"
+              className="article-card"
+            >
+              <div className="activity-title">
+                <span>
+                  송석준 "조작 녹취록 틀고 국정조사하겠다는 것기 막혀…판사들
+                  치를 떨 것"
                   <br />
-                  건의문 전달 예정 (2026.03.09. 보도)
+                  [현장영상] (2026.04.03. 보도)
                 </span>
               </div>
             </a>
 
             <a
-              href="https://n.news.naver.com/mnews/article/666/0000098593?sid=100"
+              href="https://www.kihoilbo.co.kr/news/articleView.html?idxno=3018701"
               target="_blank"
               rel="noopener"
               className="article-card"
             >
               <div className="activity-title">
                 <span>
-                  송석준 “대통령님, 말로만 하지 말고 악법부터 폐지하라”
+                  송석준 국회의원, ‘소형화물차 유류비 최대 100만 원 환급’ 법안
+                  발의
                   <br />
-                  (2026.03.09. 보도)
+                  (2026.04.06. 보도)
                 </span>
               </div>
             </a>
 
             <a
-              href="https://www.newsworks.co.kr/news/articleView.html?idxno=833539"
+              href="https://www.sejungilbo.com/news/articleView.html?idxno=57630"
               target="_blank"
               rel="noopener"
               className="article-card"
             >
               <div className="activity-title">
                 <span>
-                  송석준 "쟁의·소송 지옥 될 노란봉투법 시행 즉각 중단하라"{" "}
+                  송석준, 판교 스타트업 간담회…이천 밸리 추진 논의 <br />
+                  (2026.04.08. 보도)
+                </span>
+              </div>
+            </a>
+
+            <a
+              href="https://n.news.naver.com/mnews/article/448/0000602598?sid=100"
+              target="_blank"
+              rel="noopener"
+              className="article-card"
+            >
+              <div className="activity-title">
+                <span>
+                  송석준, 박상용 위증 고발에 분노 "이게 도대체 뭐 하는 겁니까?"{" "}
                   <br />
-                  (2026.03.10. 보도)
+                  [현장영상] (2026.04.09. 보도)
                 </span>
               </div>
             </a>
 
             <a
-              href="https://n.news.naver.com/mnews/article/448/0000596897?sid=100"
+              href="https://www.newspim.com/news/view/20260409000921"
               target="_blank"
               rel="noopener"
               className="article-card"
             >
               <div className="activity-title">
                 <span>
-                  송석준 "추미애, 황당무계한 안건으로 회의하는 척"
+                  '주거 복지는 저출산 극복의 필수품..여야 합의로 중장기 플랜
+                  만든다' 토론
                   <br />
-                  [현장영상] (2026.03.16. 보도)
+                  (2026.04.09. 보도)
                 </span>
               </div>
             </a>
 
             <a
-              href="https://n.news.naver.com/mnews/article/449/0000332898?sid=100"
+              href="https://n.news.naver.com/mnews/article/055/0001347488?sid=100"
               target="_blank"
               rel="noopener"
               className="article-card"
             >
               <div className="activity-title">
                 <span>
-                  송석준, 영세사업자 화물차 유류, ‘교통·에너지·환경세도 100만원
-                  환급’ 추진 <br />
-                  (2026.03.23. 보도)
+                  [정치쇼] 송석준 "국조특위 현장조사? 현장체험 수준…한동훈 증인
+                  불러야"
+                  <br />
+                  (2026.04.10. 보도)
                 </span>
               </div>
             </a>
 
             <a
-              href="https://www.ilyosisa.co.kr/mobile/article.html?no=254898"
+              href="https://n.news.naver.com/mnews/article/448/0000602959?sid=162"
               target="_blank"
               rel="noopener"
               className="article-card"
             >
               <div className="activity-title">
                 <span>
-                  &lt;일요대담&gt; 국민의힘 송석준 의원 (인터뷰, 2026.03.24.
-                  보도)
-                </span>
-              </div>
-            </a>
-
-            <a
-              href="https://www.joongboo.com/news/articleView.html?idxno=363720600"
-              target="_blank"
-              rel="noopener"
-              className="article-card"
-            >
-              <div className="activity-title">
-                <span>
-                  송석준 “경강선 출근 시간 배차 간격 조정… <br />
-                  대기시간 최대 10분 단축” (2026.03.24. 보도)
-                </span>
-              </div>
-            </a>
-
-            <a
-              href="https://www.joongboo.com/news/articleView.html?idxno=363720764"
-              target="_blank"
-              rel="noopener"
-              className="article-card"
-            >
-              <div className="activity-title">
-                <span>
-                  [정치돋보기] ‘수도권 vs 지방’ 이분법 넘어, 이제는 ‘상생의
-                  성장판’ 열 때 <br />
-                  (2026.03.25. 보도)
-                </span>
-              </div>
-            </a>
-
-            <a
-              href="https://www.breaknews.com/1194894"
-              target="_blank"
-              rel="noopener"
-              className="article-card"
-            >
-              <div className="activity-title">
-                <span>
-                  송석준 국민의힘 의원, 수도권 중첩규제 해소위한 정책토론회개최
+                  野 송석준 "한동훈, 부산 출마? 우린 무공천하는 게 바람직"{" "}
                   <br />
                   (2026.03.25. 보도)
+                </span>
+              </div>
+            </a>
+
+            <a
+              href="https://www.sentv.co.kr/article/view/sentv202604130104"
+              target="_blank"
+              rel="noopener"
+              className="article-card"
+            >
+              <div className="activity-title">
+                <span>
+                  송석준 의원, 고담 · 대월 하이패스 IC 간담회 개최 <br />
+                  (2026.04.13. 보도)
+                </span>
+              </div>
+            </a>
+
+            <a
+              href="https://n.news.naver.com/mnews/article/056/0012163820?sid=162"
+              target="_blank"
+              rel="noopener"
+              className="article-card"
+            >
+              <div className="activity-title">
+                <span>
+                  국힘 송석준 “장동혁, 모든 세력 한동훈·유승민 끌어모으라…방미는
+                  총사령관의 이탈” <br />
+                  (2026.04.16. 보도)
+                </span>
+              </div>
+            </a>
+
+            <a
+              href="https://n.news.naver.com/mnews/article/277/0005752561?sid=100"
+              target="_blank"
+              rel="noopener"
+              className="article-card"
+            >
+              <div className="activity-title">
+                <span>
+                  국힘 경기의원 "자체 선대위 즉시 발족…수도권 승리 전초 될 것"{" "}
+                  <br />
+                  (2026.04.21. 보도)
+                </span>
+              </div>
+            </a>
+
+            <a
+              href="https://n.news.naver.com/mnews/article/449/0000342721?sid=100"
+              target="_blank"
+              rel="noopener"
+              className="article-card"
+            >
+              <div className="activity-title">
+                <span>
+                  국힘 송석준 “조국이 후보로 나올 정도로 우리가 수세…가슴 아파”
+                  [정치시그널] <br />
+                  (2026.04.23. 보도)
                 </span>
               </div>
             </a>
