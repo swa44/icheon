@@ -144,6 +144,32 @@ export default function AdminPage() {
     }
   };
 
+  const convertToWebP = (file: File): Promise<Blob> => {
+    return new Promise((resolve) => {
+      const img = new window.Image();
+      const url = URL.createObjectURL(file);
+      img.onload = () => {
+        const canvas = document.createElement("canvas");
+        canvas.width = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+        canvas.getContext("2d")!.drawImage(img, 0, 0);
+        canvas.toBlob(
+          (blob) => {
+            URL.revokeObjectURL(url);
+            resolve(blob ?? file);
+          },
+          "image/webp",
+          0.85,
+        );
+      };
+      img.onerror = () => {
+        URL.revokeObjectURL(url);
+        resolve(file);
+      };
+      img.src = url;
+    });
+  };
+
   // 이미지 업로드 처리 (Supabase Storage)
   const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
@@ -153,19 +179,18 @@ export default function AdminPage() {
 
     try {
       const uploadPromises = Array.from(files).map(async (file) => {
-        const fileExt = file.name.split(".").pop();
-        const fileName = `${generateUUID()}.${fileExt}`;
-        const filePath = `${fileName}`;
+        const webpBlob = await convertToWebP(file);
+        const fileName = `${generateUUID()}.webp`;
 
         const { error: uploadError } = await supabase.storage
           .from("post-images")
-          .upload(filePath, file);
+          .upload(fileName, webpBlob, { contentType: "image/webp" });
 
         if (uploadError) throw uploadError;
 
         const {
           data: { publicUrl },
-        } = supabase.storage.from("post-images").getPublicUrl(filePath);
+        } = supabase.storage.from("post-images").getPublicUrl(fileName);
 
         return publicUrl;
       });
@@ -181,7 +206,6 @@ export default function AdminPage() {
       alert("이미지 업로드에 실패했습니다.");
     } finally {
       setIsUploading(false);
-      // 같은 파일 다시 올릴 수 있게 초기화
       if (fileInputRef.current) fileInputRef.current.value = "";
     }
   };
