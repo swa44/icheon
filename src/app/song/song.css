@@ -914,3 +914,19 @@ nav.highlight {
   border-radius: 4px;
   margin-right: 8px;
 }
+
+/* PC에서만 작동하는 호버 효과 (모바일 스티키 호버 방지) */
+@media (hover: hover) {
+  .pc-hover-red:hover {
+    border-color: #e61e2b !important;
+  }
+  .pc-hover-red:hover .pc-hover-text {
+    color: #e61e2b !important;
+  }
+}
+
+/* 터치 시 피드백 (선택 사항: 누르고 있을 때만 살짝 반응) */
+.pc-hover-red:active {
+  background-color: #fcfcfc;
+  transform: scale(0.98);
+}

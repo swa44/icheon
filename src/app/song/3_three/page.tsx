@@ -90,9 +90,9 @@ export default function SongThree() {
               <a
                 href="https://youtu.be/2o_UcXA04BY"
                 onClick={(e) => openYouTube(e, "2o_UcXA04BY")}
-                className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:border-[#e61e2b] transition-colors no-underline group"
+                className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm transition-all no-underline pc-hover-red"
               >
-                <p className="text-[15px] font-bold text-gray-800 mb-1 leading-snug group-hover:text-[#e61e2b]">
+                <p className="text-[15px] font-bold text-gray-800 mb-1 leading-snug pc-hover-text">
                   [KBS 일요진단] 6.3 지방선거 각 당 현안
                 </p>
                 <span className="text-xs text-[#e61e2b] font-medium flex items-center gap-1">
@@ -104,9 +104,9 @@ export default function SongThree() {
               <a
                 href="https://youtu.be/VAT1gAvqW-0"
                 onClick={(e) => openYouTube(e, "VAT1gAvqW-0")}
-                className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:border-[#e61e2b] transition-colors no-underline group"
+                className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm transition-all no-underline pc-hover-red"
               >
-                <p className="text-[15px] font-bold text-gray-800 mb-1 leading-snug group-hover:text-[#e61e2b]">
+                <p className="text-[15px] font-bold text-gray-800 mb-1 leading-snug pc-hover-text">
                   [채널A 정치시그널] 송석준 "조응천도 접촉…막판 대전환 위해
                   무엇도 회피 안 돼"
                 </p>
@@ -119,9 +119,9 @@ export default function SongThree() {
               <a
                 href="https://youtu.be/w5InUV2mhyg"
                 onClick={(e) => openYouTube(e, "w5InUV2mhyg")}
-                className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:border-[#e61e2b] transition-colors no-underline group"
+                className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm transition-all no-underline pc-hover-red"
               >
-                <p className="text-[15px] font-bold text-gray-800 mb-1 leading-snug group-hover:text-[#e61e2b]">
+                <p className="text-[15px] font-bold text-gray-800 mb-1 leading-snug pc-hover-text">
                   [MBC 뉴스 투데이] 송석준 "한동훈도 연대해야"
                 </p>
                 <span className="text-xs text-[#e61e2b] font-medium flex items-center gap-1">
