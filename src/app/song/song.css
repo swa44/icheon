@@ -925,8 +925,24 @@ nav.highlight {
   }
 }
 
-/* 터치 시 피드백 (선택 사항: 누르고 있을 때만 살짝 반응) */
+/* 모바일 및 포커스 시 색상 유지 방지 */
+.pc-hover-red, 
+.pc-hover-red:focus, 
+.pc-hover-red:active,
+.pc-hover-red:focus-within {
+  border-color: #f3f4f6 !important; /* border-gray-100 */
+  outline: none !important;
+}
+
+.pc-hover-text,
+.pc-hover-red:focus .pc-hover-text,
+.pc-hover-red:active .pc-hover-text,
+.pc-hover-red:focus-within .pc-hover-text {
+  color: #1f2937 !important; /* text-gray-800 */
+}
+
+/* 활성화 시 아주 살짝만 반응 (선택 사항) */
 .pc-hover-red:active {
-  background-color: #fcfcfc;
+  background-color: #f9fafb !important;
   transform: scale(0.98);
 }
