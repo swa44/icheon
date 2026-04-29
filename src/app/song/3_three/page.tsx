@@ -47,6 +47,26 @@ function VideoPlayer({
 }
 
 export default function SongThree() {
+  const openYouTube = (e: React.MouseEvent, videoId: string) => {
+    e.preventDefault();
+    const webUrl = `https://youtu.be/${videoId}`;
+    const iosUrl = `youtube://www.youtube.com/watch?v=${videoId}`;
+    const androidUrl = `intent://www.youtube.com/watch?v=${videoId}#Intent;package=com.google.android.youtube;scheme=https;end`;
+
+    const userAgent = typeof navigator !== "undefined" ? navigator.userAgent : "";
+
+    if (/android/i.test(userAgent)) {
+      window.location.href = androidUrl;
+    } else if (/iPad|iPhone|iPod/.test(userAgent)) {
+      window.location.href = iosUrl;
+      setTimeout(() => {
+        window.location.href = webUrl;
+      }, 500);
+    } else {
+      window.open(webUrl, "_blank");
+    }
+  };
+
   return (
     <div className="h-full">
       <main>
@@ -57,6 +77,60 @@ export default function SongThree() {
             width="100%"
             loading="eager"
           />
+        </div>
+
+        {/* 주요방송 풀버전 섹션 추가 */}
+        <div className="px-4 mt-6 mb-2">
+          <div className="bg-gray-50 rounded-2xl px-3 py-4 border border-gray-100 shadow-sm">
+            <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+              <span className="w-1 h-5 bg-[#e61e2b] rounded-full"></span>
+              주요방송 풀버전
+            </h2>
+            <div className="flex flex-col gap-3">
+              <a
+                href="https://youtu.be/2o_UcXA04BY"
+                onClick={(e) => openYouTube(e, "2o_UcXA04BY")}
+                className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:border-[#e61e2b] transition-colors no-underline group"
+              >
+                <p className="text-[15px] font-bold text-gray-800 mb-1 leading-snug group-hover:text-[#e61e2b]">
+                  [KBS 일요진단] 6.3 지방선거 각 당 현안
+                </p>
+                <span className="text-xs text-[#e61e2b] font-medium flex items-center gap-1">
+                  영상 보기{" "}
+                  <i className="fas fa-external-link-alt text-[10px]"></i>
+                </span>
+              </a>
+
+              <a
+                href="https://youtu.be/VAT1gAvqW-0"
+                onClick={(e) => openYouTube(e, "VAT1gAvqW-0")}
+                className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:border-[#e61e2b] transition-colors no-underline group"
+              >
+                <p className="text-[15px] font-bold text-gray-800 mb-1 leading-snug group-hover:text-[#e61e2b]">
+                  [채널A 정치시그널] 송석준 "조응천도 접촉…막판 대전환 위해
+                  무엇도 회피 안 돼"
+                </p>
+                <span className="text-xs text-[#e61e2b] font-medium flex items-center gap-1">
+                  영상 보기{" "}
+                  <i className="fas fa-external-link-alt text-[10px]"></i>
+                </span>
+              </a>
+
+              <a
+                href="https://youtu.be/w5InUV2mhyg"
+                onClick={(e) => openYouTube(e, "w5InUV2mhyg")}
+                className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:border-[#e61e2b] transition-colors no-underline group"
+              >
+                <p className="text-[15px] font-bold text-gray-800 mb-1 leading-snug group-hover:text-[#e61e2b]">
+                  [MBC 뉴스 투데이] 송석준 "한동훈도 연대해야"
+                </p>
+                <span className="text-xs text-[#e61e2b] font-medium flex items-center gap-1">
+                  영상 보기{" "}
+                  <i className="fas fa-external-link-alt text-[10px]"></i>
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
 
         <div className="content-section" style={{ marginBottom: "50px" }}>
