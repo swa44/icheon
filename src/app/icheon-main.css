@@ -337,6 +337,11 @@ body {
   margin-bottom: 2px;
 }
 
+.ppp-card-badge-sub {
+  opacity: 0.45;
+  margin-left: 2px;
+}
+
 .ppp-card-district {
   font-size: 0.78rem;
   color: #111;
