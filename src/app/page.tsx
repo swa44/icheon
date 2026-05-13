@@ -68,15 +68,6 @@ export default function IcheonMainPage() {
           <div className="ppp-logo">
             <img src="/ppp-logo.webp" alt="국민의힘" className="ppp-logo-img" />
           </div>
-          <div className="ppp-header-right">
-            <button className="ppp-header-btn" aria-label="검색">
-              <i className="fas fa-search" />
-            </button>
-            <button className="ppp-find-btn">후보찾기</button>
-            <button className="ppp-header-btn" aria-label="메뉴">
-              <i className="fas fa-bars" />
-            </button>
-          </div>
         </div>
       </header>
 
@@ -90,13 +81,6 @@ export default function IcheonMainPage() {
             <br />
             후보자들을 소개합니다.
           </h1>
-          <a href="#" className="ppp-hero-viewall">
-            전체보기{" "}
-            <i
-              className="fas fa-chevron-right"
-              style={{ fontSize: "0.6rem" }}
-            />
-          </a>
         </div>
         <p className="ppp-hero-sub">
           지역의 변화, 주민의 참여와 함께 만들겠습니다.
@@ -124,10 +108,6 @@ export default function IcheonMainPage() {
           <span className="accent-bar" />
           후보자 소개
         </h2>
-        <a href="#" className="ppp-section-viewall">
-          전체보기{" "}
-          <i className="fas fa-chevron-right" style={{ fontSize: "0.58rem" }} />
-        </a>
       </div>
 
       {/* 후보자 카드 2열 그리드 */}
@@ -169,9 +149,6 @@ export default function IcheonMainPage() {
         ))}
       </div>
 
-      <p className="ppp-disclaimer">
-        ※ 상기 정보는 예시이며, 실제 후보자 정보와 다를 수 있습니다.
-      </p>
 
       {/* 공보물 모달 */}
       {selected && (
