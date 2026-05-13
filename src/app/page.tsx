@@ -82,9 +82,7 @@ export default function IcheonMainPage() {
             후보자들을 소개합니다.
           </h1>
         </div>
-        <p className="ppp-hero-sub">
-          지역의 변화, 주민의 참여와 함께 만들겠습니다.
-        </p>
+        <p className="ppp-hero-sub">국민의힘 후보자들을 소개합니다.</p>
       </div>
 
       {/* 필터 탭 */}
@@ -148,7 +146,6 @@ export default function IcheonMainPage() {
           </div>
         ))}
       </div>
-
 
       {/* 공보물 모달 */}
       {selected && (
