@@ -66,7 +66,7 @@ export default function IcheonMainPage() {
       <header className="ppp-header">
         <div className="ppp-header-inner">
           <div className="ppp-logo">
-            <img src="/ppp-logo.png" alt="국민의힘" className="ppp-logo-img" />
+            <img src="/ppp-logo.webp" alt="국민의힘" className="ppp-logo-img" />
           </div>
           <div className="ppp-header-right">
             <button className="ppp-header-btn" aria-label="검색">
