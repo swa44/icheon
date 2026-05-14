@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./icheon-main.css";
 
 const FILTER_TABS = [
@@ -20,8 +20,7 @@ type Candidate = {
   number: string | null;
   slogan: string;
   tags: string[];
-  profileImg: string | null; // 프로필 사진: "/2026profile/홍길동.jpg"
-  gongbo: string[]; // 공보물 이미지: ["/2026profile/홍길동_공보1.jpg", ...]
+  profileImg: string | null;
 };
 
 const CANDIDATES: Candidate[] = [
@@ -36,7 +35,6 @@ const CANDIDATES: Candidate[] = [
     slogan: "이천 성장 지금이 골든타임",
     tags: [],
     profileImg: "/2026profile/김경희.webp",
-    gongbo: [],
   },
   // 도의원 — 1선거구 → 2선거구
   {
@@ -49,7 +47,6 @@ const CANDIDATES: Candidate[] = [
     slogan: "믿고, 다시!",
     tags: ["#태그1", "#태그2"],
     profileImg: "/2026profile/김일중.webp",
-    gongbo: [],
   },
   {
     id: 3,
@@ -61,7 +58,6 @@ const CANDIDATES: Candidate[] = [
     slogan: "3선의 힘으로 예산 왕창 끌어오겠습니다!",
     tags: ["#겸손", "#열정"],
     profileImg: "/2026profile/허원.webp",
-    gongbo: [],
   },
   // 시의원 — 가선거구(2-가 → 2-나) → 나선거구(2-나)
   {
@@ -74,7 +70,6 @@ const CANDIDATES: Candidate[] = [
     slogan: "발로 뛰는 현장정치!",
     tags: ["#희망포인트"],
     profileImg: "/2026profile/김재국.webp",
-    gongbo: [],
   },
   {
     id: 5,
@@ -86,7 +81,6 @@ const CANDIDATES: Candidate[] = [
     slogan: "검증된 시민의 일꾼!",
     tags: [],
     profileImg: "/2026profile/박명서.webp",
-    gongbo: [],
   },
   {
     id: 6,
@@ -98,7 +92,6 @@ const CANDIDATES: Candidate[] = [
     slogan: "당신이 힘들때, 곁에서 위로가 되어주는 사람!",
     tags: [],
     profileImg: "/2026profile/박선진.webp",
-    gongbo: [],
   },
   // 비례
   {
@@ -106,18 +99,30 @@ const CANDIDATES: Candidate[] = [
     positionType: "비례",
     positionLabel: "이천시비례대표 후보",
     district: "이천시",
-    name: "최유리",
+    name: "최은정",
     number: "2",
     slogan: "이제 이천이 올라갈 시간!",
     tags: [],
-    profileImg: "/2026profile/최유리.webp",
-    gongbo: [],
+    profileImg: "/2026profile/최은정.webp",
   },
 ];
 
 export default function IcheonMainPage() {
   const [activeFilter, setActiveFilter] = useState("전체");
   const [selected, setSelected] = useState<Candidate | null>(null);
+  const [gongboImages, setGongboImages] = useState<string[]>([]);
+
+  useEffect(() => {
+    if (!selected) {
+      setGongboImages([]);
+      document.body.style.overflow = "";
+      return;
+    }
+    document.body.style.overflow = "hidden";
+    fetch(`/api/gongbo/${encodeURIComponent(selected.name)}`)
+      .then((r) => r.json())
+      .then((data) => setGongboImages(data.files ?? []));
+  }, [selected]);
 
   const filtered =
     activeFilter === "전체"
@@ -238,8 +243,8 @@ export default function IcheonMainPage() {
 
             {/* 모달 본문 — 공보물 이미지 */}
             <div className="ppp-modal-body">
-              {selected.gongbo.length > 0 ? (
-                selected.gongbo.map((src, i) => (
+              {gongboImages.length > 0 ? (
+                gongboImages.map((src, i) => (
                   <img
                     key={i}
                     src={src}
