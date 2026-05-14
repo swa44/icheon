@@ -104,7 +104,7 @@ const CANDIDATES: Candidate[] = [
   {
     id: 7,
     positionType: "비례",
-    positionLabel: "이천시비례대표 예비후보",
+    positionLabel: "이천시비례대표 후보",
     district: "이천시",
     name: "최유리",
     number: "2",
@@ -197,10 +197,10 @@ export default function IcheonMainPage() {
                   <div className="ppp-card-district">{c.district}</div>
                 )}
                 <div className="ppp-card-name-row">
-                  <span className="ppp-card-name">{c.name}</span>
                   {c.number && (
                     <span className="ppp-card-num-badge">{c.number}</span>
                   )}
+                  <span className="ppp-card-name">{c.name}</span>
                 </div>
                 <p className="ppp-card-slogan">{c.slogan}</p>
                 <div className="ppp-card-tags">
