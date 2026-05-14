@@ -298,8 +298,8 @@ body {
 
 /* 원형 사진 */
 .ppp-card-photo {
-  width: 86px;
-  height: 86px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   background: linear-gradient(145deg, #f5f5f7 0%, #e8e8ec 100%);
   flex-shrink: 0;
@@ -331,7 +331,7 @@ body {
   color: #c9151e;
   border-radius: 20px;
   padding: 2px 7px;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: -0.1px;
   margin-bottom: 2px;
@@ -343,7 +343,7 @@ body {
 }
 
 .ppp-card-district {
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: #111;
   font-weight: 600;
   margin-bottom: 1px;
@@ -360,7 +360,7 @@ body {
 }
 
 .ppp-card-name {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: #111;
   letter-spacing: -0.6px;
@@ -371,7 +371,7 @@ body {
 .ppp-card-num-badge {
   background: #c9151e;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   padding: 0px 10px;
   border-radius: 5px;
@@ -395,7 +395,7 @@ body {
 }
 
 .ppp-card-tag {
-  font-size: 0.7 rem;
+  font-size: 0.7rem;
   color: #777;
   background: #f5f5f7;
   padding: 2px 5px;
@@ -649,6 +649,7 @@ body {
   align-items: flex-end;
   justify-content: center;
   animation: fadeInOverlay 0.2s ease;
+  overscroll-behavior: none;
 }
 
 @keyframes fadeInOverlay {
@@ -665,6 +666,7 @@ body {
   width: 100%;
   max-width: 600px;
   max-height: 92vh;
+  max-height: 92dvh;
   border-radius: 20px 20px 0 0;
   display: flex;
   flex-direction: column;
@@ -688,10 +690,6 @@ body {
   padding: 16px 18px 14px;
   border-bottom: 1px solid #f0f0f0;
   flex-shrink: 0;
-  position: sticky;
-  top: 0;
-  background: #fff;
-  z-index: 1;
 }
 
 .ppp-modal-title {
@@ -741,6 +739,7 @@ body {
   flex-direction: column;
   gap: 12px;
   -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 
 .ppp-modal-img {
@@ -768,4 +767,132 @@ body {
 /* 카드 클릭 커서 */
 .ppp-card {
   cursor: pointer;
+}
+
+/* 이미지 클릭 힌트 */
+.ppp-modal-img {
+  cursor: zoom-in;
+}
+
+/* ===== 라이트박스 ===== */
+.ppp-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  flex-direction: column;
+}
+
+.ppp-lightbox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  flex-shrink: 0;
+}
+
+.ppp-lightbox-counter {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+
+.ppp-lightbox-close {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ppp-lightbox-scroll {
+  flex: 1;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overscroll-behavior: contain;
+}
+
+.ppp-lightbox-img {
+  height: auto;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+  animation: lbFadeIn 0.18s ease;
+}
+
+@keyframes lbFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.ppp-lightbox-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 16px 12px;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ppp-lightbox-nav-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.ppp-lightbox-nav-btn:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.ppp-lightbox-nav-btn:not(:disabled):hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.ppp-lightbox-dots {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.ppp-lightbox-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    transform 0.15s;
+}
+
+.ppp-lightbox-dot.active {
+  background: #fff;
+  transform: scale(1.3);
 }

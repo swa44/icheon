@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./icheon-main.css";
 
 const FILTER_TABS = [
@@ -89,7 +89,7 @@ const CANDIDATES: Candidate[] = [
     district: "이천시 나선거구",
     name: "박선진",
     number: "2-나",
-    slogan: "당신이 힘들때, 곁에서 위로가 되어주는 사람!",
+    slogan: "힘들때, 곁에서 위로가 되어주는 사람!",
     tags: [],
     profileImg: "/2026profile/박선진.webp",
   },
@@ -112,6 +112,41 @@ export default function IcheonMainPage() {
   const [selected, setSelected] = useState<Candidate | null>(null);
   const [gongboImages, setGongboImages] = useState<string[]>([]);
 
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [displayScale, setDisplayScale] = useState(1);
+  const scaleRef = useRef(1);
+  const pinchRef = useRef({ dist: 0, baseScale: 1 });
+  const swipeRef = useRef({ startX: 0, startY: 0 });
+  const lightboxWrapRef = useRef<HTMLDivElement>(null);
+
+  function openLightbox(i: number) {
+    setLightboxIndex(i);
+    setDisplayScale(1);
+    scaleRef.current = 1;
+  }
+
+  function closeLightbox() {
+    setLightboxIndex(null);
+    setDisplayScale(1);
+    scaleRef.current = 1;
+  }
+
+  function goNext() {
+    setLightboxIndex((i) =>
+      i !== null ? (i + 1) % gongboImages.length : null,
+    );
+    setDisplayScale(1);
+    scaleRef.current = 1;
+  }
+
+  function goPrev() {
+    setLightboxIndex((i) =>
+      i !== null ? (i - 1 + gongboImages.length) % gongboImages.length : null,
+    );
+    setDisplayScale(1);
+    scaleRef.current = 1;
+  }
+
   useEffect(() => {
     if (!selected) {
       setGongboImages([]);
@@ -123,6 +158,76 @@ export default function IcheonMainPage() {
       .then((r) => r.json())
       .then((data) => setGongboImages(data.files ?? []));
   }, [selected]);
+
+  useEffect(() => {
+    const el = lightboxWrapRef.current;
+    if (!el || lightboxIndex === null) return;
+
+    const onTouchStart = (e: TouchEvent) => {
+      if (e.touches.length === 2) {
+        pinchRef.current.dist = Math.hypot(
+          e.touches[0].clientX - e.touches[1].clientX,
+          e.touches[0].clientY - e.touches[1].clientY,
+        );
+        pinchRef.current.baseScale = scaleRef.current;
+      } else if (e.touches.length === 1) {
+        swipeRef.current.startX = e.touches[0].clientX;
+        swipeRef.current.startY = e.touches[0].clientY;
+      }
+    };
+
+    const onTouchMove = (e: TouchEvent) => {
+      if (e.touches.length === 2) {
+        e.preventDefault();
+        const dist = Math.hypot(
+          e.touches[0].clientX - e.touches[1].clientX,
+          e.touches[0].clientY - e.touches[1].clientY,
+        );
+        const next = Math.min(
+          Math.max(
+            pinchRef.current.baseScale * (dist / pinchRef.current.dist),
+            1,
+          ),
+          4,
+        );
+        scaleRef.current = next;
+        setDisplayScale(next);
+      }
+    };
+
+    const onTouchEnd = (e: TouchEvent) => {
+      if (e.changedTouches.length === 1 && scaleRef.current <= 1) {
+        const dx = e.changedTouches[0].clientX - swipeRef.current.startX;
+        const dy = e.changedTouches[0].clientY - swipeRef.current.startY;
+        if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 50) {
+          if (dx < 0) goNext();
+          else goPrev();
+        }
+      }
+    };
+
+    el.addEventListener("touchstart", onTouchStart, { passive: true });
+    el.addEventListener("touchmove", onTouchMove, { passive: false });
+    el.addEventListener("touchend", onTouchEnd, { passive: true });
+    return () => {
+      el.removeEventListener("touchstart", onTouchStart);
+      el.removeEventListener("touchmove", onTouchMove);
+      el.removeEventListener("touchend", onTouchEnd);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lightboxIndex]);
+
+  useEffect(() => {
+    if (lightboxIndex === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "ArrowRight") goNext();
+      else if (e.key === "ArrowLeft") goPrev();
+      else if (e.key === "Escape") closeLightbox();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lightboxIndex]);
 
   const filtered =
     activeFilter === "전체"
@@ -250,6 +355,7 @@ export default function IcheonMainPage() {
                     src={src}
                     alt={`${selected.name} 공보물 ${i + 1}`}
                     className="ppp-modal-img"
+                    onClick={() => openLightbox(i)}
                   />
                 ))
               ) : (
@@ -260,6 +366,66 @@ export default function IcheonMainPage() {
               )}
             </div>
           </div>
+        </div>
+      )}
+
+      {/* 라이트박스 */}
+      {lightboxIndex !== null && (
+        <div className="ppp-lightbox">
+          <div className="ppp-lightbox-header">
+            <span className="ppp-lightbox-counter">
+              {lightboxIndex + 1} / {gongboImages.length}
+            </span>
+            <button className="ppp-lightbox-close" onClick={closeLightbox}>
+              <i className="fas fa-times" />
+            </button>
+          </div>
+          <div ref={lightboxWrapRef} className="ppp-lightbox-scroll">
+            <img
+              key={lightboxIndex}
+              src={gongboImages[lightboxIndex]}
+              alt="공보물"
+              className="ppp-lightbox-img"
+              style={{
+                maxHeight: `calc(90dvh * ${displayScale})`,
+                maxWidth: `${displayScale * 100}%`,
+                width: "auto",
+                height: "auto",
+              }}
+              draggable={false}
+              onDoubleClick={() => {
+                setDisplayScale(1);
+                scaleRef.current = 1;
+              }}
+            />
+          </div>
+          {gongboImages.length > 1 && (
+            <div className="ppp-lightbox-nav">
+              <button
+                className="ppp-lightbox-nav-btn"
+                onClick={goPrev}
+                disabled={lightboxIndex === 0}
+              >
+                <i className="fas fa-chevron-left" />
+              </button>
+              <div className="ppp-lightbox-dots">
+                {gongboImages.map((_, i) => (
+                  <span
+                    key={i}
+                    className={`ppp-lightbox-dot${i === lightboxIndex ? " active" : ""}`}
+                    onClick={() => openLightbox(i)}
+                  />
+                ))}
+              </div>
+              <button
+                className="ppp-lightbox-nav-btn"
+                onClick={goNext}
+                disabled={lightboxIndex === gongboImages.length - 1}
+              >
+                <i className="fas fa-chevron-right" />
+              </button>
+            </div>
+          )}
         </div>
       )}
     </div>
