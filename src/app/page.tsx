@@ -16,6 +16,7 @@ type Candidate = {
   positionType: string;
   positionLabel: string;
   district: string | null;
+  districtAreas?: string | null;
   name: string;
   number: string | null;
   slogan: string;
@@ -42,6 +43,7 @@ const CANDIDATES: Candidate[] = [
     positionType: "도의원",
     positionLabel: "경기도의회의원 후보",
     district: "이천시 제1선거구",
+    districtAreas: "신둔, 백사, 마장, 창전, 증포, 중리, 관고",
     name: "김일중",
     number: "2",
     slogan: "믿고, 다시!",
@@ -53,6 +55,7 @@ const CANDIDATES: Candidate[] = [
     positionType: "도의원",
     positionLabel: "경기도의회의원 후보",
     district: "이천시 제2선거구",
+    districtAreas: "장호원, 부발, 대월, 모가, 설성, 율면, 호법",
     name: "허원",
     number: "2",
     slogan: "이천의 불도저",
@@ -65,6 +68,7 @@ const CANDIDATES: Candidate[] = [
     positionType: "시의원",
     positionLabel: "이천시의회의원 후보",
     district: "이천시 가선거구",
+    districtAreas: "신둔, 백사, 증포, 관고",
     name: "김재국",
     number: "2-가",
     slogan: "발로 뛰는 현장정치!",
@@ -76,6 +80,7 @@ const CANDIDATES: Candidate[] = [
     positionType: "시의원",
     positionLabel: "이천시의회의원 후보",
     district: "이천시 가선거구",
+    districtAreas: "신둔, 백사, 증포, 관고",
     name: "박명서",
     number: "2-나",
     slogan: "검증된 시민의 일꾼!",
@@ -87,6 +92,7 @@ const CANDIDATES: Candidate[] = [
     positionType: "시의원",
     positionLabel: "이천시의회의원 후보",
     district: "이천시 나선거구",
+    districtAreas: "마장, 창전, 중리",
     name: "송옥란",
     number: "2-가",
     slogan: "더 정의롭고 따뜻하게!",
@@ -98,6 +104,7 @@ const CANDIDATES: Candidate[] = [
     positionType: "시의원",
     positionLabel: "이천시의회의원 후보",
     district: "이천시 나선거구",
+    districtAreas: "마장, 창전, 중리",
     name: "박선진",
     number: "2-나",
     slogan: "이천의 젊은 엔진",
@@ -109,6 +116,7 @@ const CANDIDATES: Candidate[] = [
     positionType: "시의원",
     positionLabel: "이천시의회의원 후보",
     district: "이천시 다선거구",
+    districtAreas: "장호원, 부발, 대월, 모가, 설성, 율면, 호법",
     name: "김하식",
     number: "2-가",
     slogan: "이천을 가장 잘 아는 사람",
@@ -120,6 +128,7 @@ const CANDIDATES: Candidate[] = [
     positionType: "시의원",
     positionLabel: "이천시의회의원 후보",
     district: "이천시 다선거구",
+    districtAreas: "장호원, 부발, 대월, 모가, 설성, 율면, 호법",
     name: "임진모",
     number: "2-나",
     slogan: "오직 시민만! 검증된 시의원",
@@ -340,7 +349,14 @@ export default function IcheonMainPage() {
                   </span>
                 </div>
                 {c.district && (
-                  <div className="ppp-card-district">{c.district}</div>
+                  <div className="ppp-card-district">
+                    <span>{c.district}</span>
+                    {c.districtAreas && (
+                      <span className="ppp-card-district-areas">
+                        {c.districtAreas}
+                      </span>
+                    )}
+                  </div>
                 )}
                 <div className="ppp-card-name-row">
                   {c.number && (
