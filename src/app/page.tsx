@@ -4,10 +4,10 @@ import { useState, useEffect, useRef } from "react";
 import "./icheon-main.css";
 
 const FILTER_TABS = [
-  { key: "전체", label: "전체", count: 7 },
+  { key: "전체", label: "전체", count: 10 },
   { key: "시장", label: "시장", count: 1 },
   { key: "도의원", label: "도의원", count: 2 },
-  { key: "시의원", label: "시의원", count: 3 },
+  { key: "시의원", label: "시의원", count: 6 },
   { key: "비례", label: "비례", count: 1 },
 ];
 
@@ -45,7 +45,7 @@ const CANDIDATES: Candidate[] = [
     name: "김일중",
     number: "2",
     slogan: "믿고, 다시!",
-    tags: ["#태그1", "#태그2"],
+    tags: [],
     profileImg: "/2026profile/김일중.webp",
   },
   {
@@ -55,11 +55,11 @@ const CANDIDATES: Candidate[] = [
     district: "이천시 제2선거구",
     name: "허원",
     number: "2",
-    slogan: "3선의 힘으로 예산 왕창 끌어오겠습니다!",
-    tags: ["#겸손", "#열정"],
+    slogan: "이천의 불도저",
+    tags: [],
     profileImg: "/2026profile/허원.webp",
   },
-  // 시의원 — 가선거구(2-가 → 2-나) → 나선거구(2-나)
+  // 시의원 — 가선거구(2-가 → 2-나) → 나선거구(2-가 → 2-나) → 다선거구(2-가)
   {
     id: 4,
     positionType: "시의원",
@@ -68,7 +68,7 @@ const CANDIDATES: Candidate[] = [
     name: "김재국",
     number: "2-가",
     slogan: "발로 뛰는 현장정치!",
-    tags: ["#희망포인트"],
+    tags: [],
     profileImg: "/2026profile/김재국.webp",
   },
   {
@@ -87,15 +87,48 @@ const CANDIDATES: Candidate[] = [
     positionType: "시의원",
     positionLabel: "이천시의회의원 후보",
     district: "이천시 나선거구",
+    name: "송옥란",
+    number: "2-가",
+    slogan: "더 정의롭고 따뜻하게!",
+    tags: [],
+    profileImg: "/2026profile/송옥란.webp",
+  },
+  {
+    id: 7,
+    positionType: "시의원",
+    positionLabel: "이천시의회의원 후보",
+    district: "이천시 나선거구",
     name: "박선진",
     number: "2-나",
-    slogan: "힘들때, 곁에서 위로가 되어주는 사람!",
+    slogan: "이천의 젊은 엔진",
     tags: [],
     profileImg: "/2026profile/박선진.webp",
   },
+  {
+    id: 8,
+    positionType: "시의원",
+    positionLabel: "이천시의회의원 후보",
+    district: "이천시 다선거구",
+    name: "김하식",
+    number: "2-가",
+    slogan: "이천을 가장 잘 아는 사람",
+    tags: [],
+    profileImg: "/2026profile/김하식.webp",
+  },
+  {
+    id: 9,
+    positionType: "시의원",
+    positionLabel: "이천시의회의원 후보",
+    district: "이천시 다선거구",
+    name: "임진모",
+    number: "2-나",
+    slogan: "오직 시민만! 검증된 시의원",
+    tags: [],
+    profileImg: "/2026profile/임진모.webp",
+  },
   // 비례
   {
-    id: 7,
+    id: 10,
     positionType: "비례",
     positionLabel: "이천시비례대표 후보",
     district: "이천시",
