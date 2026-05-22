@@ -111,6 +111,7 @@ export default function IcheonMainPage() {
   const [activeFilter, setActiveFilter] = useState("전체");
   const [selected, setSelected] = useState<Candidate | null>(null);
   const [gongboImages, setGongboImages] = useState<string[]>([]);
+  const [gongboLoading, setGongboLoading] = useState(false);
 
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [displayScale, setDisplayScale] = useState(1);
@@ -154,9 +155,11 @@ export default function IcheonMainPage() {
       return;
     }
     document.body.style.overflow = "hidden";
+    setGongboLoading(true);
     fetch(`/api/gongbo/${encodeURIComponent(selected.name)}`)
       .then((r) => r.json())
-      .then((data) => setGongboImages(data.files ?? []));
+      .then((data) => setGongboImages(data.files ?? []))
+      .finally(() => setGongboLoading(false));
   }, [selected]);
 
   useEffect(() => {
@@ -348,7 +351,11 @@ export default function IcheonMainPage() {
 
             {/* 모달 본문 — 공보물 이미지 */}
             <div className="ppp-modal-body">
-              {gongboImages.length > 0 ? (
+              {gongboLoading ? (
+                <div className="ppp-modal-spinner">
+                  <i className="fas fa-spinner fa-spin" />
+                </div>
+              ) : gongboImages.length > 0 ? (
                 gongboImages.map((src, i) => (
                   <img
                     key={i}

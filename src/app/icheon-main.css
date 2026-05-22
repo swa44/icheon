@@ -450,6 +450,7 @@ body {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   letter-spacing: -0.2px;
   font-size: 0.65rem;
@@ -747,6 +748,15 @@ body {
   border-radius: 10px;
   display: block;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ppp-modal-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  color: #c9151e;
+  font-size: 1.8rem;
 }
 
 .ppp-modal-empty {
