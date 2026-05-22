@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "이천시",
+  title: "이천시 국민의힘 원팀!",
   description: "이천시 국민의힘 선거 후보자 안내",
   icons: {
     icon: [
