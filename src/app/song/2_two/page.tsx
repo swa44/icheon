@@ -12,91 +12,74 @@ export default function SongTwo() {
 
           <div className="activity-card">
             <div className="activity-title">
-              <span>4/3 제27회 이천 백사 산수유 꽃축제</span>
+              <span>6/2 반도체특별법 시행령안 수도권 배제 규탄 기자회견</span>
             </div>
-            <img src="/song/assets/260501.webp" width="100%" loading="lazy" />
+            <img src="/song/assets/june261.webp" width="100%" loading="lazy" />
           </div>
-
           <div className="activity-card">
             <div className="activity-title">
-              <span>4/5 제27회 이천 도자기 마라톤대회</span>
+              <span>6/4 투표용지 부족사태 규탄대회</span>
             </div>
-            <img src="/song/assets/260502.webp" width="100%" loading="lazy" />
+            <img src="/song/assets/june262.webp" width="100%" loading="lazy" />
           </div>
-
           <div className="activity-card">
             <div className="activity-title">
-              <span>4/8 판교 스타트업 정책간담회</span>
+              <span>6/6 제71회 현충일 추념식</span>
             </div>
-            <img src="/song/assets/260503.webp" width="100%" loading="lazy" />
+            <img src="/song/assets/june263.webp" width="100%" loading="lazy" />
           </div>
-
+          <div className="activity-card">
+            <div className="activity-title">
+              <span>6/8 무공수훈자회 명예회원 추대식</span>
+            </div>
+            <img src="/song/assets/june264.webp" width="100%" loading="lazy" />
+          </div>
+          <div className="activity-card">
+            <div className="activity-title">
+              <span>6/9 e경제일보 창간 8주년 포럼</span>
+            </div>
+            <img src="/song/assets/june265.webp" width="100%" loading="lazy" />
+          </div>
+          <div className="activity-card">
+            <div className="activity-title">
+              <span>6/12 실버타운 정책토론회</span>
+            </div>
+            <img src="/song/assets/june266.webp" width="100%" loading="lazy" />
+          </div>
+          <div className="activity-card">
+            <div className="activity-title">
+              <span>6/15 미래국토인프라혁신포럼 제15차 세미나</span>
+            </div>
+            <img src="/song/assets/june267.webp" width="100%" loading="lazy" />
+          </div>
+          <div className="activity-card">
+            <div className="activity-title">
+              <span>6/16 이원회 창립 51주년 기념식 강연</span>
+            </div>
+            <img src="/song/assets/june268.webp" width="100%" loading="lazy" />
+          </div>
           <div className="activity-card">
             <div className="activity-title">
               <span>
-                4/8 미래국토인프라혁신포럼 14차 세미나 ‘국가 인프라 기본법’ 입법
-                추진을 위한 토론회
+                6/22 이화영 위증 유죄판결 및 민주당 허위날조 주장 규탄 기자회견
               </span>
             </div>
-            <img src="/song/assets/260504.webp" width="100%" loading="lazy" />
+            <img src="/song/assets/june269.webp" width="100%" loading="lazy" />
           </div>
-
           <div className="activity-card">
             <div className="activity-title">
-              <span>4/9 국조특위 서울중앙지검 현장조사</span>
+              <span>6/25 원코리아 국민연대 ‘두 국가론 규탄대회’</span>
             </div>
-            <img src="/song/assets/260505.webp" width="100%" loading="lazy" />
+            <img src="/song/assets/june2610.webp" width="100%" loading="lazy" />
           </div>
-
           <div className="activity-card">
             <div className="activity-title">
-              <span>4/9 뉴스핌 서울이코노믹포럼 토론</span>
+              <span>
+                6/26 ‘4류정치가 1류기업의 발목을 잡는다’ 민당정 간담회
+              </span>
             </div>
-            <img src="/song/assets/260506.webp" width="100%" loading="lazy" />
+            <img src="/song/assets/june2611.webp" width="100%" loading="lazy" />
           </div>
-
-          <div className="activity-card">
-            <div className="activity-title">
-              <span>4/10 SK하이닉스 하이패스 IC 현장 점검</span>
-            </div>
-            <img src="/song/assets/260507.webp" width="100%" loading="lazy" />
-          </div>
-
-          <div className="activity-card">
-            <div className="activity-title">
-              <span>4/15 해병대 원로 위로 행사 및 준4군 체제 입법 설명회</span>
-            </div>
-            <img src="/song/assets/260508.webp" width="100%" loading="lazy" />
-          </div>
-
-          <div className="activity-card">
-            <div className="activity-title">
-              <span>4/20 제46회 장애인의 날 기념식</span>
-            </div>
-            <img src="/song/assets/260509.webp" width="100%" loading="lazy" />
-          </div>
-
-          <div className="activity-card">
-            <div className="activity-title">
-              <span>4/23 채널A 정치시그널 출연</span>
-            </div>
-            <img src="/song/assets/260510.webp" width="100%" loading="lazy" />
-          </div>
-
-          <div className="activity-card">
-            <div className="activity-title">
-              <span>4/23 국조특위 감사원 현장조사</span>
-            </div>
-            <img src="/song/assets/260511.webp" width="100%" loading="lazy" />
-          </div>
-
-          <div className="activity-card">
-            <div className="activity-title">
-              <span>4/26 제40회 이천 도자기축제</span>
-            </div>
-            <img src="/song/assets/260512.webp" width="100%" loading="lazy" />
-          </div>
-
           {/*
           <img
             src="/song/assets/202601_1.jpg"
@@ -164,185 +147,132 @@ export default function SongTwo() {
           <p className="section-subtitle">
             각 카드를 클릭하면 해당 기사로 연결됩니다
           </p>
-
           <div className="news-list" style={{ marginBottom: "50px" }}>
             <a
-              href="https://n.news.naver.com/mnews/article/015/0005270375?sid=102"
+              href="https://n.news.naver.com/mnews/article/666/0000112696?sid=102"
               target="_blank"
               rel="noopener"
               className="article-card"
             >
               <div className="activity-title">
                 <span>
-                  감찰 기능 마비된 법원…2년간 판사 중징계 '0건' <br />
-                  (2026.04.02. 보도)
+                  “반도체클러스터 수도권 배제 철회” <br />
+                  (2026.06.25. 보도)
                 </span>
               </div>
             </a>
 
             <a
-              href="https://n.news.naver.com/mnews/article/448/0000601282?sid=100"
+              href="https://www.dnews.co.kr/uhtml/view.jsp?idxno=202606151006545190332"
               target="_blank"
               rel="noopener"
               className="article-card"
             >
               <div className="activity-title">
                 <span>
-                  송석준 "조작 녹취록 틀고 국정조사하겠다는 것기 막혀…판사들
-                  치를 떨 것"
+                  "인프라는 국가 성장전략, 수요구조 재편 대응 필요" <br />
+                  (2026.06.16. 보도)
+                </span>
+              </div>
+            </a>
+
+            <a
+              href="https://n.news.naver.com/mnews/article/009/0005696193?sid=100"
+              target="_blank"
+              rel="noopener"
+              className="article-card"
+            >
+              <div className="activity-title">
+                <span>
+                  “불가피한 2주택자 양도세 비과세 추진” <br />
+                  (2026.06.19. 보도)
+                </span>
+              </div>
+            </a>
+
+            <a
+              href="https://www.ajunews.com/view/20260612091651635"
+              target="_blank"
+              rel="noopener"
+              className="article-card"
+            >
+              <div className="activity-title">
+                <span>
+                  "비정상의 정상화가 대한민국 정치의 과제다" <br />
+                  (2026.06.14. 보도)
+                </span>
+              </div>
+            </a>
+
+            <a
+              href="https://news.bbsi.co.kr/news/articleView.html?idxno=4090672"
+              target="_blank"
+              rel="noopener"
+              className="article-card"
+            >
+              <div className="activity-title">
+                <span>
+                  "국민의힘 투톱 갈등? 張 결단해야 한다는 당내 인식 확산된 것"{" "}
                   <br />
-                  [현장영상] (2026.04.03. 보도)
+                  (2026.06.23. 보도)
                 </span>
               </div>
             </a>
 
             <a
-              href="https://www.kihoilbo.co.kr/news/articleView.html?idxno=3018701"
+              href="https://n.news.naver.com/mnews/article/449/0000350318?sid=100"
               target="_blank"
               rel="noopener"
               className="article-card"
             >
               <div className="activity-title">
                 <span>
-                  송석준 국회의원, ‘소형화물차 유류비 최대 100만 원 환급’ 법안
-                  발의
+                  “당내 ‘한동훈 포비아’, 100에서 30으로 낮아져” [정치시그널]{" "}
                   <br />
-                  (2026.04.06. 보도)
+                  (2026.06.26. 보도)
                 </span>
               </div>
             </a>
 
             <a
-              href="https://www.sejungilbo.com/news/articleView.html?idxno=57630"
+              href="https://n.news.naver.com/mnews/article/449/0000350329?sid=100"
               target="_blank"
               rel="noopener"
               className="article-card"
             >
               <div className="activity-title">
                 <span>
-                  송석준, 판교 스타트업 간담회…이천 밸리 추진 논의 <br />
-                  (2026.04.08. 보도)
-                </span>
-              </div>
-            </a>
-
-            <a
-              href="https://n.news.naver.com/mnews/article/448/0000602598?sid=100"
-              target="_blank"
-              rel="noopener"
-              className="article-card"
-            >
-              <div className="activity-title">
-                <span>
-                  송석준, 박상용 위증 고발에 분노 "이게 도대체 뭐 하는 겁니까?"{" "}
+                  “한동훈, 배신자 프레임 벗는 노력 굉장히 중요” [정치시그널]{" "}
                   <br />
-                  [현장영상] (2026.04.09. 보도)
+                  (2026.06.26. 보도)
                 </span>
               </div>
             </a>
 
             <a
-              href="https://www.newspim.com/news/view/20260409000921"
+              href="https://n.news.naver.com/mnews/article/214/0001507645?sid=100"
               target="_blank"
               rel="noopener"
               className="article-card"
             >
               <div className="activity-title">
                 <span>
-                  '주거 복지는 저출산 극복의 필수품..여야 합의로 중장기 플랜
-                  만든다' 토론
-                  <br />
-                  (2026.04.09. 보도)
+                  "한동훈, 중도층 흡수할 수 있는 자산‥복당돼야" [모닝콜] <br />
+                  (2026.06.25. 보도)
                 </span>
               </div>
             </a>
 
             <a
-              href="https://n.news.naver.com/mnews/article/055/0001347488?sid=100"
+              href="https://n.news.naver.com/mnews/article/449/0000350484?sid=100"
               target="_blank"
               rel="noopener"
               className="article-card"
             >
               <div className="activity-title">
                 <span>
-                  [정치쇼] 송석준 "국조특위 현장조사? 현장체험 수준…한동훈 증인
-                  불러야"
-                  <br />
-                  (2026.04.10. 보도)
-                </span>
-              </div>
-            </a>
-
-            <a
-              href="https://n.news.naver.com/mnews/article/448/0000602959?sid=162"
-              target="_blank"
-              rel="noopener"
-              className="article-card"
-            >
-              <div className="activity-title">
-                <span>
-                  野 송석준 "한동훈, 부산 출마? 우린 무공천하는 게 바람직"{" "}
-                  <br />
-                  (2026.03.25. 보도)
-                </span>
-              </div>
-            </a>
-
-            <a
-              href="https://www.sentv.co.kr/article/view/sentv202604130104"
-              target="_blank"
-              rel="noopener"
-              className="article-card"
-            >
-              <div className="activity-title">
-                <span>
-                  송석준 의원, 고담 · 대월 하이패스 IC 간담회 개최 <br />
-                  (2026.04.13. 보도)
-                </span>
-              </div>
-            </a>
-
-            <a
-              href="https://n.news.naver.com/mnews/article/056/0012163820?sid=162"
-              target="_blank"
-              rel="noopener"
-              className="article-card"
-            >
-              <div className="activity-title">
-                <span>
-                  국힘 송석준 “장동혁, 모든 세력 한동훈·유승민 끌어모으라…방미는
-                  총사령관의 이탈” <br />
-                  (2026.04.16. 보도)
-                </span>
-              </div>
-            </a>
-
-            <a
-              href="https://n.news.naver.com/mnews/article/277/0005752561?sid=100"
-              target="_blank"
-              rel="noopener"
-              className="article-card"
-            >
-              <div className="activity-title">
-                <span>
-                  국힘 경기의원 "자체 선대위 즉시 발족…수도권 승리 전초 될 것"{" "}
-                  <br />
-                  (2026.04.21. 보도)
-                </span>
-              </div>
-            </a>
-
-            <a
-              href="https://n.news.naver.com/mnews/article/449/0000342721?sid=100"
-              target="_blank"
-              rel="noopener"
-              className="article-card"
-            >
-              <div className="activity-title">
-                <span>
-                  국힘 송석준 “조국이 후보로 나올 정도로 우리가 수세…가슴 아파”
-                  [정치시그널] <br />
-                  (2026.04.23. 보도)
+                  “장동혁, 기강잡겠다? 측근부터 잡아라” [현장영상] <br />
+                  (2026.06.25. 보도)
                 </span>
               </div>
             </a>

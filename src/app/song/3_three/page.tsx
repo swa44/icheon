@@ -53,7 +53,8 @@ export default function SongThree() {
     const iosUrl = `youtube://www.youtube.com/watch?v=${videoId}`;
     const androidUrl = `intent://www.youtube.com/watch?v=${videoId}#Intent;package=com.google.android.youtube;scheme=https;end`;
 
-    const userAgent = typeof navigator !== "undefined" ? navigator.userAgent : "";
+    const userAgent =
+      typeof navigator !== "undefined" ? navigator.userAgent : "";
 
     if (/android/i.test(userAgent)) {
       window.location.href = androidUrl;
@@ -79,7 +80,7 @@ export default function SongThree() {
           />
         </div>
 
-        {/* 주요방송 풀버전 섹션 추가 */}
+        {/* 주요방송 풀버전 섹션 추가
         <div className="px-4 mt-6 mb-2">
           <div className="bg-gray-50 rounded-2xl px-3 py-4 border border-gray-100 shadow-sm">
             <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
@@ -132,140 +133,93 @@ export default function SongThree() {
             </div>
           </div>
         </div>
+        */}
 
         <div className="content-section" style={{ marginBottom: "50px" }}>
           <VideoPlayer
-            videoId="Ag60HOHH1gA"
+            videoId="hy9dsFOvPUE"
             title={
               <>
-                <span className="badge">국조특위</span>
+                <span className="badge">BBS 인터뷰</span>
                 <span>
-                  "정진상·김현지 왜 안 부릅니까?" 증인까지 골라 뽑는 '조작특위'
+                  이화영 위증 판결 부정하는 민주당, 진실이 불편하면 판결도
+                  부정하나?
                 </span>
               </>
             }
           />
 
           <VideoPlayer
-            videoId="hhsSiD5hDOs"
+            videoId="4t2IQ1LRin8"
             title={
               <>
-                <span className="badge">국조특위</span>
-                <span>입법권력으로 판결 뒤집기?</span>
-              </>
-            }
-          />
-
-          <VideoPlayer
-            videoId="4LdLhuGGrp4"
-            title={
-              <>
-                <span className="badge">국조특위</span>
+                <span className="badge">정치시그널</span>
                 <span>
-                  결국 연기된 김용 재판, 이것이 재판관여 아니면 무엇입니까?!
+                  정부의 사법파괴와 민생파탄 저지를 위해서라도 대통합 필요!
                 </span>
               </>
             }
           />
 
           <VideoPlayer
-            videoId="9z89HaA8HYg"
+            videoId="wBscQaOj7Jw"
             title={
               <>
-                <span className="badge">현장직캠</span>
-                <span>'이천밸리' 조성 구체화 위한 첫걸음</span>
+                <span className="badge">정치시그널</span>
+                <span>장동혁 사퇴 촉구, 송석준의 속마음은?</span>
               </>
             }
           />
 
           <VideoPlayer
-            videoId="eSoLKUdpCvQ"
-            title={
-              <>
-                <span className="badge">국조특위</span>
-                <span>월북몰이 포기 못한 민주당"이게 진짜 조작 아닙니까!</span>
-              </>
-            }
-          />
-
-          <VideoPlayer
-            videoId="zqhAwgWwH-c"
+            videoId="CBZz4XltHdQ"
             title={
               <>
                 <span className="badge">인터뷰</span>
-                <span>민주당 조작특위 억지주장 못볼 꼴</span>
+                <span>선거 졌는데 성찰과 반성 대신 기강 확립?</span>
               </>
             }
           />
 
           <VideoPlayer
-            videoId="uKihBFdY7is"
+            videoId="NC9KM46LyWY"
             title={
               <>
                 <span className="badge">인터뷰</span>
-                <span>김어준 방송서 특검 브리핑?! 정치중립 포기한 특검</span>
+                <span>변화와 혁신으로 거듭나기 위한 결단이 필요한 때</span>
               </>
             }
           />
 
           <VideoPlayer
-            videoId="BmmbXbht9kU"
+            videoId="xDOoZKlirfg"
             title={
               <>
                 <span className="badge">인터뷰</span>
-                <span>박상용 입틀막하면 있던 죄가 없어지나?</span>
+                <span>선관위 난맥상, 국정조사로 바로 잡는 것이 우선!</span>
               </>
             }
           />
 
           <VideoPlayer
-            videoId="BIbqH5W6aQE"
+            videoId="IUXwQXldy-Y"
             title={
               <>
                 <span className="badge">인터뷰</span>
-                <span>민주당이 한동훈 증인채택 안(못)하는 이유?!</span>
+                <span>경제파탄·선거부실 등 이제는 정부심판의 시간</span>
               </>
             }
           />
 
           <VideoPlayer
-            videoId="ralZf2ni4B8"
+            videoId="AceNruvXOwg"
             title={
               <>
-                <span className="badge">국정조사</span>
-                <span>증거가 있다면 재심을 하세요!</span>
-              </>
-            }
-          />
-
-          <VideoPlayer
-            videoId="GrdNOfHesl0"
-            title={
-              <>
-                <span className="badge">국정조사</span>
-                <span>피고인 변호인이 특검보로?! 짜고 치는 국조특위</span>
-              </>
-            }
-          />
-
-          <VideoPlayer
-            videoId="g0SRtZiFMyQ"
-            title={
-              <>
-                <span className="badge">국정조사</span>
+                <span className="badge">반도체</span>
                 <span>
-                  대장동 사건의 본질은 공공의 탈을 쓴 7,886억 범죄수익 잔치!
+                  반도체는 정치가 아니라 산업입니다. 경기도 반도체 끝까지
+                  사수하겠습니다!
                 </span>
-              </>
-            }
-          />
-
-          <VideoPlayer
-            videoId="CYcYmYT35qA"
-            title={
-              <>
-                <span className="badge">국조특위</span>
-                <span>남욱도 인정한?! 위헌국정조사, 편향된 증인채택</span>
               </>
             }
           />
