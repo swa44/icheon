@@ -80,10 +80,7 @@ export default function SongOne() {
                 <span className="tag-current">현</span>
                 <div className="text">국회 어린이안전포럼 대표</div>
               </div>
-              <div className="list-item">
-                <span className="tag-current">현</span>
-                <div className="text">사단법인 한국애견연맹 고문</div>
-              </div>
+
               <div className="list-item">
                 <span className="tag-current">현</span>
                 <div className="text">
