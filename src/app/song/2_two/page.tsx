@@ -80,6 +80,22 @@ export default function SongTwo() {
             </div>
             <img src="/song/assets/june2611.webp" width="100%" loading="lazy" />
           </div>
+          <div className="activity-card">
+            <div className="activity-title">
+              <span>
+                6/29 투표용지 부족사태 규탄 및 선관위 개혁 요구 기자회견
+              </span>
+            </div>
+            <img src="/song/assets/june2612.webp" width="100%" loading="lazy" />
+          </div>
+          <div className="activity-card">
+            <div className="activity-title">
+              <span>
+                6/30 선거관리투명성 강화를 위한 공직선거법 개정안 대표발의
+              </span>
+            </div>
+            <img src="/song/assets/june2613.webp" width="100%" loading="lazy" />
+          </div>
           {/*
           <img
             src="/song/assets/202601_1.jpg"
